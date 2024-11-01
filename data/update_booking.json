@@ -1,0 +1,11 @@
+ {
+    "firstname" : "Ashok",
+    "lastname" : "Kumar",
+    "totalprice" : 11199088321,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2018-09-01",
+        "checkout" : "2019-10-01"
+    },
+    "additionalneeds" : "Breakfast"
+}
