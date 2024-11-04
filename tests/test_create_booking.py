@@ -14,3 +14,4 @@ def test_create_booking():
     assert bookingID is not None, "Booking ID not found in response"
     print(f"Booking ID is {bookingID}")
     pytest.bookingID = bookingID
+    return bookingID

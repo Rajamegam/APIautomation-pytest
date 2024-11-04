@@ -40,8 +40,7 @@ class APIHelper:
             print(f"POST request failed {e}")
             return None
 
-    def put(self, endpoint, payload_filename=None):
-        payload = self.load_json_payload(payload_filename)
+    def put(self, endpoint, payload=None):
         try:
             response = requests.put(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
             print(f"PUT request to {self.URL}/{endpoint} with headers: {self.header}")
