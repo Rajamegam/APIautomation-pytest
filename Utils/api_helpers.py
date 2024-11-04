@@ -31,14 +31,13 @@ class APIHelper:
             print(f"GET request failed: {e}")
             return None
 
-    def post(self, endpoint, payload_filename=None):
-        payload = self.load_json_payload(payload_filename)
+    def post(self, endpoint, payload=None):
         try:
             response = requests.post(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
-            print(f"POST request failed: {e}")
+            print(f"POST request failed {e}")
             return None
 
     def put(self, endpoint, payload_filename=None):

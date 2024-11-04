@@ -1,13 +1,16 @@
 import pytest
 from Utils.api_helpers import APIHelper
+from Utilities.configurations import *
 
 api_helper = APIHelper()
-payload_filepath = r"D:\API automation\Restful_Booker_Automation\data\create_token.json"
 
 
 @pytest.fixture(scope='session', autouse=True)
 def setup():
-    response = api_helper.post('auth', payload_filepath)
+    response = api_helper.post('auth', payload={
+        "username": config()['credentials']['username'],
+        "password": config()['credentials']['password']
+    })
     response_data = response.json()
     token = response_data.get("token")
     if token:
