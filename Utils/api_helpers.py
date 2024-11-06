@@ -11,16 +11,7 @@ class APIHelper:
         self.URL = config()['URL']['baseURL']
 
     def set_cookie_token(self, token):
-        self.header['Cookie'] = f'token={token}'
-
-    def load_json_payload(self, filename):
-        filepath = os.path.join('data', filename)
-        try:
-            with open(filepath, 'r') as file:
-                return json.load(file)
-        except FileNotFoundError:
-            print("File not found")
-            return None
+        self.header['Authorization'] = f'token={token}'
 
     def get(self, endpoint, params=None):
         try:
