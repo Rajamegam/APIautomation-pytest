@@ -1,1 +1,9 @@
-2024-11-06 15:51:42,334: INFO: root: {'bookingid': 41, 'booking': {'firstname': 'Jenna', 'lastname': 'Castro', 'totalprice': 438, 'depositpaid': True, 'bookingdates': {'checkin': '2024-11-11', 'checkout': '2024-11-23'}, 'additionalneeds': 'boy'}}
+2024-11-06 17:54:21,650: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-06 17:54:21,650: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-06 17:54:21,650: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-06 17:54:22,594: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
+2024-11-06 17:54:22,594: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-06 17:54:22,594: INFO: API_logger: Payload details:{'firstname': 'Alan', 'lastname': 'Carr', 'totalprice': 218, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-07', 'checkout': '2024-12-01'}, 'additionalneeds': 'hour'}
+2024-11-06 17:54:22,594: INFO: API_logger: Response:{'bookingid': 1434, 'booking': {'firstname': 'Alan', 'lastname': 'Carr', 'totalprice': 218, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-07', 'checkout': '2024-12-01'}, 'additionalneeds': 'hour'}}
+2024-11-06 17:54:22,595: INFO: API_logger: Booking ID:1434
+2024-11-06 17:55:57,610: CRITICAL: API_logger: POST request failed ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))

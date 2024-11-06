@@ -6,14 +6,13 @@ api_helper = BaseClass()
 
 
 class TestCreateBooking():
-    @pytest.mark.dependency()
     def test_create_booking(self):
         response = api_helper.post('booking', payload=create_booking_data())
         response_json = response.json()
-        api_helper.get_logger().info(response_json)
-        print(response_json)
+        api_helper.get_logger().info(f"Response:{response_json}")
         bookingID = response_json.get('bookingid')
+        if bookingID is None:
+            api_helper.get_logger().warning("Booking ID not found in response")
         assert bookingID is not None, "Booking ID not found in response"
-        print(f"Booking ID is {bookingID}")
+        api_helper.get_logger().info(f"Booking ID:{bookingID}")
         pytest.bookingID = bookingID
-        return bookingID
