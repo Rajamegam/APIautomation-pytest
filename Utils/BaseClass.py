@@ -29,6 +29,8 @@ class BaseClass:
     def get(self, endpoint, params=None):
         try:
             response = requests.get(f'{self.URL}/{endpoint}', headers=self.header, params=params)
+            self.logger.info(f"URL details:{self.URL}/{endpoint}")
+            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)},{params}")
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
@@ -50,27 +52,34 @@ class BaseClass:
     def put(self, endpoint, payload=None):
         try:
             response = requests.put(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
-            print(f"PUT request to {self.URL}/{endpoint} with headers: {self.header}")
+            self.logger.info(f"URL details:{self.URL}/{endpoint}")
+            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            self.logger.info(f"Payload details:{payload}")
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
-            print(f"PUT request failed: {e}")
+            self.logger.critical(f"PUT request failed{e}")
             return None
 
     def delete(self, endpoint):
         try:
             response = requests.delete(f'{self.URL}/{endpoint}', headers=self.header)
+            self.logger.info(f"URL details:{self.URL}/{endpoint}")
+            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
-            print(f"DELETE request failed: {e}")
+            self.logger.critical(f"DELETE request failed{e}")
             return None
 
-    def patch(self, endpoint):
+    def patch(self, endpoint, payload=None):
         try:
-            response = requests.patch(f'{self.URL}/{endpoint}', headers=self.header)
+            response = requests.patch(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
+            self.logger.info(f"URL details:{self.URL}/{endpoint}")
+            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            self.logger.info(f"Payload details:{payload}")
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
-            print(f"PATCH request failed: {e}")
+            self.logger.critical(f"PATCH request failed{e}")
             return None
