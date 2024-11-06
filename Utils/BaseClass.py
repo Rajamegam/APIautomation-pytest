@@ -1,10 +1,11 @@
 import json
+import logging
 import os
 import requests
 from Utilities.configurations import *
 
 
-class APIHelper:
+class BaseClass:
 
     def __init__(self):
         self.header = {'Content-Type': 'application/json'}
@@ -58,3 +59,12 @@ class APIHelper:
         except requests.exceptions.RequestException as e:
             print(f"PATCH request failed: {e}")
             return None
+
+    def get_logger(self):
+        logger = logging.getLogger()
+        filehandler = logging.FileHandler('D:\API automation\Restful_Booker_Automation\logs\logfile.log')
+        error_log_format = logging.Formatter("%(asctime)s: %(levelname)s: %(name)s: %(message)s")
+        filehandler.setFormatter(error_log_format)
+        logger.addHandler(filehandler)
+        logger.setLevel(logging.INFO)
+        return logger

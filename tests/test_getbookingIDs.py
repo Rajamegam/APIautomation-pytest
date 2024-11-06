@@ -1,7 +1,7 @@
 import pytest
-from Utils.api_helpers import APIHelper
+from Utils.BaseClass import BaseClass
 
-api_helper = APIHelper()
+api_helper = BaseClass()
 
 
 class TestGetBookingDetails:

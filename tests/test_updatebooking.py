@@ -1,11 +1,11 @@
 import pytest
-from Utils.api_helpers import APIHelper
+from Utils.BaseClass import BaseClass
 from Utilities.data_generator import create_booking_data
 
-api_helper = APIHelper()
+api_helper = BaseClass()
 
 
-class TestUpdateBooking:
+class TestUpdateBooking(BaseClass):
     @pytest.mark.dependency(depends=["test_create_booking"])
     def test_update_booking(self, setup):
         api_helper = setup

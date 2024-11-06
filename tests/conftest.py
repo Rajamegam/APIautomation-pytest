@@ -1,8 +1,8 @@
 import pytest
-from Utils.api_helpers import APIHelper
+from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
 
-api_helper = APIHelper()
+api_helper = BaseClass()
 
 
 @pytest.fixture(scope='session', autouse=True)

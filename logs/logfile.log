@@ -1,0 +1,1 @@
+2024-11-06 15:51:42,334: INFO: root: {'bookingid': 41, 'booking': {'firstname': 'Jenna', 'lastname': 'Castro', 'totalprice': 438, 'depositpaid': True, 'bookingdates': {'checkin': '2024-11-11', 'checkout': '2024-11-23'}, 'additionalneeds': 'boy'}}
