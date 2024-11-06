@@ -5,7 +5,7 @@ from Utilities.data_generator import create_booking_data
 api_helper = APIHelper()
 
 
-class TestCreateBooking():
+class TestCreateBooking:
     @pytest.mark.dependency()
     def test_create_booking(self):
         response = api_helper.post('booking', payload=create_booking_data())
