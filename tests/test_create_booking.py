@@ -6,7 +6,8 @@ api_helper = BaseClass()
 
 
 class TestCreateBooking():
-    def test_create_booking(self):
+    def test_create_booking(self, setup):
+        #api_helper = setup
         response = api_helper.post('booking', payload=create_booking_data())
         response_json = response.json()
         api_helper.get_logger().info(f"Response:{response_json}")

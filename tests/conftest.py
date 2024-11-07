@@ -16,6 +16,7 @@ def setup():
     })
     response_data = response.json()
     token = response_data.get("token")
+    api_helper.get_logger().info(token)
     if token:
         api_helper.set_cookie_token(token)
     else:
