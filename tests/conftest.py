@@ -1,4 +1,7 @@
+from datetime import datetime
+
 import pytest
+import requests
 from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
 
@@ -19,3 +22,10 @@ def setup():
         pytest.fail("Authentication failed; token not retrieved")
 
     yield api_helper
+
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_configure(config):
+    reports_dir = "D://API automation//Restful_Booker_Automation//reports"
+    now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    config.option.htmlpath = f"{reports_dir}/report_{now}.html"
