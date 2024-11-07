@@ -2,3 +2,19 @@
 2024-11-07 15:25:40,212: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
 2024-11-07 15:25:40,213: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
 2024-11-07 15:25:40,213: INFO: API_logger: be199fbdf42e675
+2024-11-07 16:30:36,541: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-07 16:30:36,542: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-07 16:30:36,542: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-07 16:30:36,542: INFO: API_logger: 779b2ee27066253
+2024-11-07 17:04:57,233: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-07 17:04:57,233: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-07 17:04:57,233: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-07 17:04:57,233: INFO: API_logger: 6f99adf6cdde7c4
+2024-11-07 17:05:14,993: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-07 17:05:14,993: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-07 17:05:14,994: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-07 17:05:14,994: INFO: API_logger: d5b15acbfff900c
+2024-11-07 17:11:58,277: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-07 17:11:58,278: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-07 17:11:58,278: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-07 17:11:58,279: INFO: API_logger: e032bb9b3f4d1c4
