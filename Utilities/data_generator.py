@@ -17,3 +17,18 @@ def create_booking_data():
     }
 
     return data
+
+
+def missing_required_fields():
+    data = {
+        "firstname": "king",
+        "lastname": "Richard",
+        "totalprice": None,
+        "depositpaid": None,
+        "bookingdates": {
+            "checkin": "2024-10-01",
+            "checkout": "2024-10-30"
+        },
+        "additionalneeds": "Breakfast"
+    }
+    return data

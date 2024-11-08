@@ -43,18 +43,19 @@ class BaseClass:
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
             self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
+            self.logger.info(f"status code:{response.status_code}")
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
-            self.logger.critical(f"POST request failed{e}")
+            self.logger.critical(f"POST request failed:{e}")
             return None
 
     def put(self, endpoint, payload=None):
         try:
             response = requests.put(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
-            # self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
-            # self.logger.info(f"Payload details:{payload}")
+            self.logger.info(f"URL details:{self.URL}/{endpoint}")
+            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            self.logger.info(f"Payload details:{payload}")
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
