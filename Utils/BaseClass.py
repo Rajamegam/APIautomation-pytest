@@ -31,7 +31,10 @@ class BaseClass:
             response = requests.get(f'{self.URL}/{endpoint}', headers=self.header, params=params)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
             self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)},{params}")
-            response.raise_for_status()
+            try:
+                response.raise_for_status()
+            except requests.exceptions.HTTPError as e:
+                self.logger.info(f"GET request failed:{e}")
             return response
         except requests.exceptions.RequestException as e:
             self.logger.error(f"GET request failed:{e}")
@@ -44,7 +47,10 @@ class BaseClass:
             self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
             self.logger.info(f"status code:{response.status_code}")
-            response.raise_for_status()
+            try:
+                response.raise_for_status()
+            except requests.exceptions.HTTPError as e:
+                self.logger.critical(f"POST request failed:{e}")
             return response
         except requests.exceptions.RequestException as e:
             self.logger.critical(f"POST request failed:{e}")
@@ -56,7 +62,10 @@ class BaseClass:
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
             self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
-            response.raise_for_status()
+            try:
+                response.raise_for_status()
+            except requests.exceptions.HTTPError as e:
+                self.logger.info(f"PUT request failed:{e}")
             return response
         except requests.exceptions.RequestException as e:
             # self.logger.critical(f"PUT request failed{e}")
@@ -68,7 +77,10 @@ class BaseClass:
             response = requests.delete(f'{self.URL}/{endpoint}', headers=self.header)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
             self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
-            response.raise_for_status()
+            try:
+                response.raise_for_status()
+            except requests.exceptions.HTTPError as e:
+                self.logger.info(f"DELETE request failed:{e}")
             return response
         except requests.exceptions.RequestException as e:
             self.logger.critical(f"DELETE request failed{e}")
@@ -80,7 +92,10 @@ class BaseClass:
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
             self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
-            response.raise_for_status()
+            try:
+                response.raise_for_status()
+            except requests.exceptions.HTTPError as e:
+                self.logger.info(f"PATCH request failed:{e}")
             return response
         except requests.exceptions.RequestException as e:
             self.logger.critical(f"PATCH request failed{e}")

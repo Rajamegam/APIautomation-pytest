@@ -23,12 +23,4 @@ class TestCreateBooking:
     # TC002 - Create booking with missing fields
     def test_create_booking_with_missing_fields(self, setup):
         response = api_helper.post('booking', payload=missing_required_fields())
-        assert response is None
-
-
-
-
-
-
-
-
+        assert response.status_code == 500
