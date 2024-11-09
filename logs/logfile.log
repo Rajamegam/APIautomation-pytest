@@ -46,3 +46,23 @@
 2024-11-09 15:49:54,600: INFO: API_logger: Payload details:{'firstname': 'king', 'lastname': 'Richard', 'totalprice': None, 'depositpaid': None, 'bookingdates': {'checkin': '2024-10-01', 'checkout': '2024-10-30'}, 'additionalneeds': 'Breakfast'}
 2024-11-09 15:49:54,600: INFO: API_logger: status code:500
 2024-11-09 15:49:54,601: CRITICAL: API_logger: POST request failed:500 Server Error: Internal Server Error for url: https://restful-booker.herokuapp.com/booking
+2024-11-09 16:08:53,075: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-09 16:08:53,076: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-09 16:08:53,077: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-09 16:08:53,077: INFO: API_logger: status code:200
+2024-11-09 16:08:53,078: INFO: API_logger: 3e678229f0ec2e7
+2024-11-09 16:09:51,572: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-09 16:09:51,572: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-09 16:09:51,572: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-09 16:09:51,573: INFO: API_logger: status code:200
+2024-11-09 16:09:51,573: INFO: API_logger: 9c1fbc7e8c771ed
+2024-11-09 16:10:31,100: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-09 16:10:31,100: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-09 16:10:31,100: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-09 16:10:31,101: INFO: API_logger: status code:200
+2024-11-09 16:10:31,101: INFO: API_logger: 9a79045377658c7
+2024-11-09 16:11:03,390: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-09 16:11:03,391: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-09 16:11:03,391: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-09 16:11:03,391: INFO: API_logger: status code:200
+2024-11-09 16:11:03,391: INFO: API_logger: b8b1f8772a5ac51

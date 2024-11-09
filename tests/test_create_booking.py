@@ -24,3 +24,8 @@ class TestCreateBooking:
     def test_create_booking_with_missing_fields(self, setup):
         response = api_helper.post('booking', payload=missing_required_fields())
         assert response.status_code == 500
+
+    # TC-003 - Validate total price datatype
+    def test_validate_total_price_datatype(self):
+        payload = create_booking_data()
+        assert type(payload["totalprice"]) is int
