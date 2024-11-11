@@ -12,8 +12,8 @@ class BaseClass:
         self.header = {'Content-Type': 'application/json'}
         self.URL = config()['URL']['baseURL']
 
-    def set_cookie_token(self, token):
-        self.header['Cookie'] = f'token={token}'
+    def set_auth_token(self, token):
+        self.header['Authorization'] = f'token={token}'
 
     def get_logger(self):
         logger = logging.getLogger("API_logger")

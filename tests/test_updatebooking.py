@@ -6,7 +6,7 @@ api_helper = BaseClass()
 
 
 class TestUpdateBooking(BaseClass):
-    @pytest.mark.dependency(depends=["test_create_booking.test_create_booking"])
+    @pytest.mark.dependency(depends=["test_create_booking"])
     def test_update_booking(self, setup):
         api_helper = setup
         bookingID = getattr(pytest, 'bookingID', None)

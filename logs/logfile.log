@@ -1,4 +1,4 @@
-2024-11-09 15:48:59,934: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+=2024-11-09 15:48:59,934: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
 2024-11-09 15:48:59,935: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
 2024-11-09 15:48:59,935: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
 2024-11-09 15:48:59,935: INFO: API_logger: status code:200
@@ -66,3 +66,12 @@
 2024-11-09 16:11:03,391: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
 2024-11-09 16:11:03,391: INFO: API_logger: status code:200
 2024-11-09 16:11:03,391: INFO: API_logger: b8b1f8772a5ac51
+2024-11-10 19:07:22,392: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
+2024-11-10 19:07:22,393: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-10 19:07:22,393: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
+2024-11-10 19:07:22,393: INFO: API_logger: status code:200
+2024-11-10 19:07:22,393: INFO: API_logger: b4d345a140d43f4
+2024-11-10 19:07:24,158: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking/7738
+2024-11-10 19:07:24,159: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Cookie': 'token=b4d345a140d43f4'},None
+2024-11-10 19:07:24,159: INFO: API_logger: Payload details:{'firstname': 'Emma', 'lastname': 'Kim', 'totalprice': 397, 'depositpaid': True, 'bookingdates': {'checkin': '2024-11-19', 'checkout': '2024-12-02'}, 'additionalneeds': 'include'}
+2024-11-10 19:07:24,160: INFO: API_logger: PUT request failed:405 Client Error: Method Not Allowed for url: https://restful-booker.herokuapp.com/booking/7738

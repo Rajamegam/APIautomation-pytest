@@ -10,20 +10,29 @@ api_helper = BaseClass()
 
 @pytest.fixture(scope='session', autouse=True)
 def setup():
-    response = api_helper.post('auth', payload={
-        "username": config()['credentials']['username'],
-        "password": config()['credentials']['password']
-    })
+    payloads = {
+        "grant_type": "client_credentials",
+        "ignorecache": "true",
+        "return_auth_schemas": "true",
+        "return_client_metadata": "true",
+        "return_unconsented_scopes": "true"
+    }
+    response = requests.post(
+        # url="https://api-m.sandbox.paypal.com/v1/oauth2/token",
+        url=f"{config()['URL']['baseURL']}/v1/oauth2/token",
+        headers={'Content-Type': 'application/x-www-form-urlencoded'},
+        auth=(config()['client details']['Client ID'], config()['client details']['Client Secret']),
+        data=payloads
+    )
     response_data = response.json()
-    token = response_data.get("token")
+    token = response_data.get("access_token")
     api_helper.get_logger().info(token)
     if token:
-        api_helper.set_cookie_token(token)
+        api_helper.set_auth_token(token)
     else:
         pytest.fail("Authentication failed; token not retrieved")
 
     yield api_helper
-
 
 # @pytest.hookimpl(tryfirst=True)
 # def pytest_configure(config):
