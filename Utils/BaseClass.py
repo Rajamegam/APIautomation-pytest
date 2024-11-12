@@ -13,7 +13,7 @@ class BaseClass:
         self.URL = config()['URL']['baseURL']
 
     def set_auth_token(self, token):
-        self.header['Authorization'] = f'token={token}'
+        self.header['Authorization'] = f'Bearer {token}'
 
     def get_logger(self):
         logger = logging.getLogger("API_logger")
@@ -30,7 +30,7 @@ class BaseClass:
         try:
             response = requests.get(f'{self.URL}/{endpoint}', headers=self.header, params=params)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)},{params}")
+            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)},{params}")
             try:
                 response.raise_for_status()
             except requests.exceptions.HTTPError as e:
@@ -40,11 +40,11 @@ class BaseClass:
             self.logger.error(f"GET request failed:{e}")
             return None
 
-    def post(self, endpoint, payload=None):
+    def post(self, endpoint, payload=None, auth=None, data=None):
         try:
-            response = requests.post(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
+            response = requests.post(f'{self.URL}/{endpoint}', headers=self.header, json=payload, auth=auth, data=data)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            self.logger.info(f"Header details:{self.header},{self.set_auth_token(self)}")
             self.logger.info(f"Payload details:{payload}")
             self.logger.info(f"status code:{response.status_code}")
             try:
@@ -60,7 +60,7 @@ class BaseClass:
         try:
             response = requests.put(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
             try:
                 response.raise_for_status()
@@ -76,7 +76,7 @@ class BaseClass:
         try:
             response = requests.delete(f'{self.URL}/{endpoint}', headers=self.header)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             try:
                 response.raise_for_status()
             except requests.exceptions.HTTPError as e:
@@ -90,7 +90,7 @@ class BaseClass:
         try:
             response = requests.patch(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
+            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
             try:
                 response.raise_for_status()

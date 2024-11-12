@@ -1,77 +1,45 @@
-=2024-11-09 15:48:59,934: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 15:48:59,935: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 15:48:59,935: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 15:48:59,935: INFO: API_logger: status code:200
-2024-11-09 15:48:59,935: INFO: API_logger: b4d1ca2a9503f65
-2024-11-09 15:49:00,897: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:00,897: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 15:49:00,897: INFO: API_logger: Payload details:{'firstname': 'James', 'lastname': 'Burke', 'totalprice': 257, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-10', 'checkout': '2024-11-27'}, 'additionalneeds': 'sit'}
-2024-11-09 15:49:00,897: INFO: API_logger: status code:200
-2024-11-09 15:49:00,898: INFO: API_logger: Response:{'bookingid': 4183, 'booking': {'firstname': 'James', 'lastname': 'Burke', 'totalprice': 257, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-10', 'checkout': '2024-11-27'}, 'additionalneeds': 'sit'}}
-2024-11-09 15:49:00,898: INFO: API_logger: Booking ID:4183
-2024-11-09 15:49:01,864: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:01,865: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Cookie': 'token=<Utils.BaseClass.BaseClass object at 0x0000023AD6A0D070>'},None
-2024-11-09 15:49:01,865: INFO: API_logger: Payload details:{'firstname': 'king', 'lastname': 'Richard', 'totalprice': None, 'depositpaid': None, 'bookingdates': {'checkin': '2024-10-01', 'checkout': '2024-10-30'}, 'additionalneeds': 'Breakfast'}
-2024-11-09 15:49:01,865: INFO: API_logger: status code:500
-2024-11-09 15:49:01,865: CRITICAL: API_logger: POST request failed:500 Server Error: Internal Server Error for url: https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:30,965: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 15:49:30,965: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 15:49:30,965: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 15:49:30,965: INFO: API_logger: status code:200
-2024-11-09 15:49:30,965: INFO: API_logger: ec7e2d160db2516
-2024-11-09 15:49:31,895: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:31,895: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 15:49:31,896: INFO: API_logger: Payload details:{'firstname': 'Christina', 'lastname': 'King', 'totalprice': 146, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-15', 'checkout': '2024-12-06'}, 'additionalneeds': 'participant'}
-2024-11-09 15:49:31,896: INFO: API_logger: status code:200
-2024-11-09 15:49:31,897: INFO: API_logger: Response:{'bookingid': 4551, 'booking': {'firstname': 'Christina', 'lastname': 'King', 'totalprice': 146, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-15', 'checkout': '2024-12-06'}, 'additionalneeds': 'participant'}}
-2024-11-09 15:49:31,897: INFO: API_logger: Booking ID:4551
-2024-11-09 15:49:32,777: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:32,778: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Cookie': 'token=<Utils.BaseClass.BaseClass object at 0x0000022F3C03B050>'},None
-2024-11-09 15:49:32,778: INFO: API_logger: Payload details:{'firstname': 'king', 'lastname': 'Richard', 'totalprice': None, 'depositpaid': None, 'bookingdates': {'checkin': '2024-10-01', 'checkout': '2024-10-30'}, 'additionalneeds': 'Breakfast'}
-2024-11-09 15:49:32,778: INFO: API_logger: status code:500
-2024-11-09 15:49:32,779: CRITICAL: API_logger: POST request failed:500 Server Error: Internal Server Error for url: https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:52,723: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 15:49:52,723: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 15:49:52,723: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 15:49:52,723: INFO: API_logger: status code:200
-2024-11-09 15:49:52,724: INFO: API_logger: 951a53edaf00199
-2024-11-09 15:49:53,630: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:53,630: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 15:49:53,631: INFO: API_logger: Payload details:{'firstname': 'Benjamin', 'lastname': 'Rice', 'totalprice': 239, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-16', 'checkout': '2024-12-05'}, 'additionalneeds': 'energy'}
-2024-11-09 15:49:53,631: INFO: API_logger: status code:200
-2024-11-09 15:49:53,632: INFO: API_logger: Response:{'bookingid': 4768, 'booking': {'firstname': 'Benjamin', 'lastname': 'Rice', 'totalprice': 239, 'depositpaid': False, 'bookingdates': {'checkin': '2024-11-16', 'checkout': '2024-12-05'}, 'additionalneeds': 'energy'}}
-2024-11-09 15:49:53,632: INFO: API_logger: Booking ID:4768
-2024-11-09 15:49:54,599: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking
-2024-11-09 15:49:54,600: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Cookie': 'token=<Utils.BaseClass.BaseClass object at 0x000002752BCCC260>'},None
-2024-11-09 15:49:54,600: INFO: API_logger: Payload details:{'firstname': 'king', 'lastname': 'Richard', 'totalprice': None, 'depositpaid': None, 'bookingdates': {'checkin': '2024-10-01', 'checkout': '2024-10-30'}, 'additionalneeds': 'Breakfast'}
-2024-11-09 15:49:54,600: INFO: API_logger: status code:500
-2024-11-09 15:49:54,601: CRITICAL: API_logger: POST request failed:500 Server Error: Internal Server Error for url: https://restful-booker.herokuapp.com/booking
-2024-11-09 16:08:53,075: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 16:08:53,076: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 16:08:53,077: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 16:08:53,077: INFO: API_logger: status code:200
-2024-11-09 16:08:53,078: INFO: API_logger: 3e678229f0ec2e7
-2024-11-09 16:09:51,572: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 16:09:51,572: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 16:09:51,572: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 16:09:51,573: INFO: API_logger: status code:200
-2024-11-09 16:09:51,573: INFO: API_logger: 9c1fbc7e8c771ed
-2024-11-09 16:10:31,100: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 16:10:31,100: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 16:10:31,100: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 16:10:31,101: INFO: API_logger: status code:200
-2024-11-09 16:10:31,101: INFO: API_logger: 9a79045377658c7
-2024-11-09 16:11:03,390: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-09 16:11:03,391: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-09 16:11:03,391: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-09 16:11:03,391: INFO: API_logger: status code:200
-2024-11-09 16:11:03,391: INFO: API_logger: b8b1f8772a5ac51
-2024-11-10 19:07:22,392: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/auth
-2024-11-10 19:07:22,393: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
-2024-11-10 19:07:22,393: INFO: API_logger: Payload details:{'username': 'admin', 'password': 'password123'}
-2024-11-10 19:07:22,393: INFO: API_logger: status code:200
-2024-11-10 19:07:22,393: INFO: API_logger: b4d345a140d43f4
-2024-11-10 19:07:24,158: INFO: API_logger: URL details:https://restful-booker.herokuapp.com/booking/7738
-2024-11-10 19:07:24,159: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Cookie': 'token=b4d345a140d43f4'},None
-2024-11-10 19:07:24,159: INFO: API_logger: Payload details:{'firstname': 'Emma', 'lastname': 'Kim', 'totalprice': 397, 'depositpaid': True, 'bookingdates': {'checkin': '2024-11-19', 'checkout': '2024-12-02'}, 'additionalneeds': 'include'}
-2024-11-10 19:07:24,160: INFO: API_logger: PUT request failed:405 Client Error: Method Not Allowed for url: https://restful-booker.herokuapp.com/booking/7738
+2024-11-12 07:19:24,012: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 07:19:24,014: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 07:19:24,014: INFO: API_logger: Payload details:None
+2024-11-12 07:19:24,014: INFO: API_logger: status code:200
+2024-11-12 07:19:24,014: INFO: API_logger: A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg
+2024-11-12 07:19:24,467: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 07:19:24,467: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg'},None
+2024-11-12 07:19:24,467: INFO: API_logger: Payload details:None
+2024-11-12 07:19:24,467: INFO: API_logger: status code:200
+2024-11-12 07:22:31,354: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 07:22:31,355: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 07:22:31,355: INFO: API_logger: Payload details:None
+2024-11-12 07:22:31,355: INFO: API_logger: status code:200
+2024-11-12 07:22:31,355: INFO: API_logger: A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg
+2024-11-12 07:22:32,268: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 07:22:32,268: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg'},None
+2024-11-12 07:22:32,269: INFO: API_logger: Payload details:None
+2024-11-12 07:22:32,269: INFO: API_logger: status code:200
+2024-11-12 07:22:45,801: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 07:22:45,803: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 07:22:45,803: INFO: API_logger: Payload details:None
+2024-11-12 07:22:45,803: INFO: API_logger: status code:200
+2024-11-12 07:22:45,804: INFO: API_logger: A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg
+2024-11-12 07:22:46,747: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 07:22:46,747: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg'},None
+2024-11-12 07:22:46,748: INFO: API_logger: Payload details:None
+2024-11-12 07:22:46,748: INFO: API_logger: status code:200
+2024-11-12 07:22:53,763: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 07:22:53,763: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 07:22:53,763: INFO: API_logger: Payload details:None
+2024-11-12 07:22:53,763: INFO: API_logger: status code:200
+2024-11-12 07:22:53,763: INFO: API_logger: A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg
+2024-11-12 07:22:54,110: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 07:22:54,110: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAK1gewLgadqRM_hBjM_aa1m2nWjwpwmS4UREcoO2Bo4G2QGVtVANRZphG4rX1ID3rMVf1cHnERUuU4X9FQnWPSyAQOAFg'},None
+2024-11-12 07:22:54,110: INFO: API_logger: Payload details:None
+2024-11-12 07:22:54,110: INFO: API_logger: status code:200
+2024-11-12 07:52:54,811: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 07:52:54,812: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 07:52:54,812: INFO: API_logger: Payload details:None
+2024-11-12 07:52:54,812: INFO: API_logger: status code:200
+2024-11-12 07:52:54,814: INFO: API_logger: A21AALjq6thgfjVKBTftJLwkPsUjD-1AnR8vYBRz8pJVI2lvpjAHF1Lh4ebizXwwtiSGeizzyo0BaNSK3peTSuejGctdKhRiw
+2024-11-12 07:52:55,737: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 07:52:55,738: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AALjq6thgfjVKBTftJLwkPsUjD-1AnR8vYBRz8pJVI2lvpjAHF1Lh4ebizXwwtiSGeizzyo0BaNSK3peTSuejGctdKhRiw'},None
+2024-11-12 07:52:55,738: INFO: API_logger: Payload details:None
+2024-11-12 07:52:55,738: INFO: API_logger: status code:200
