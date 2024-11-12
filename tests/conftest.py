@@ -8,7 +8,7 @@ from Utilities.configurations import *
 api_helper = BaseClass()
 
 
-@pytest.fixture(scope='module', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def setup():
     payloads = {
         "grant_type": "client_credentials",
@@ -19,7 +19,8 @@ def setup():
     }
     response = api_helper.post("v1/oauth2/token", data=payloads,
                                auth=(
-                               config()['client details']['Client ID'], config()['client details']['Client Secret']))
+                                   config()['client details']['Client ID'],
+                                   config()['client details']['Client Secret']))
     response_data = response.json()
     token = response_data.get("access_token")
     api_helper.get_logger().info(token)
@@ -29,6 +30,11 @@ def setup():
         pytest.fail("Authentication failed; token not retrieved")
 
     yield api_helper
+
+
+@pytest.fixture(scope="session")
+def invoice_number():
+    return None
 
     # @pytest.hookimpl(tryfirst=True)
     # def pytest_configure(config):

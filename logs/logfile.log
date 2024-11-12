@@ -1,0 +1,20 @@
+2024-11-12 17:22:53,733: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 17:22:53,733: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 17:22:53,733: INFO: API_logger: Payload details:None
+2024-11-12 17:22:53,733: INFO: API_logger: status code:200
+2024-11-12 17:22:53,733: INFO: API_logger: A21AAI3iSTTpGqAzLgTIJJxFBjXv-aukRcsrpP-AswoyPK_w3IPjT1484AEjWOFsiWR3T283LIcHa463jeZh5pmwyu3rErNbA
+2024-11-12 17:25:20,568: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 17:25:20,568: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 17:25:20,568: INFO: API_logger: Payload details:None
+2024-11-12 17:25:20,568: INFO: API_logger: status code:200
+2024-11-12 17:25:20,568: INFO: API_logger: A21AALsgkPGka7UQD0lFNE_VPMT1nMFXL1u8yp6Ssh95iqZsZL5bQXaN2cC9Sry7x8006oa790MgvjhCshtCEwqAC4lsnrkdw
+2024-11-12 17:47:33,494: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 17:47:33,495: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 17:47:33,495: INFO: API_logger: Payload details:None
+2024-11-12 17:47:33,497: INFO: API_logger: status code:200
+2024-11-12 17:47:33,497: INFO: API_logger: A21AAKDi6tvpRXp8k92l5XFNfwoiRfRW7PIPYBCcaxsht-tOTNplxZnYoqIdngSennFFYjZj_DE1KXcV54-W6XGK8MW4xLTNQ
+2024-11-12 17:48:46,381: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 17:48:46,382: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 17:48:46,384: INFO: API_logger: Payload details:None
+2024-11-12 17:48:46,384: INFO: API_logger: status code:200
+2024-11-12 17:48:46,384: INFO: API_logger: A21AAKDi6tvpRXp8k92l5XFNfwoiRfRW7PIPYBCcaxsht-tOTNplxZnYoqIdngSennFFYjZj_DE1KXcV54-W6XGK8MW4xLTNQ
