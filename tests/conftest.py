@@ -8,7 +8,7 @@ from Utilities.configurations import *
 api_helper = BaseClass()
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='module', autouse=True)
 def setup():
     payloads = {
         "grant_type": "client_credentials",
@@ -31,10 +31,6 @@ def setup():
 
     yield api_helper
 
-
-@pytest.fixture(scope="session")
-def invoice_number():
-    return None
 
     # @pytest.hookimpl(tryfirst=True)
     # def pytest_configure(config):

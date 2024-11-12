@@ -18,3 +18,45 @@
 2024-11-12 17:48:46,384: INFO: API_logger: Payload details:None
 2024-11-12 17:48:46,384: INFO: API_logger: status code:200
 2024-11-12 17:48:46,384: INFO: API_logger: A21AAKDi6tvpRXp8k92l5XFNfwoiRfRW7PIPYBCcaxsht-tOTNplxZnYoqIdngSennFFYjZj_DE1KXcV54-W6XGK8MW4xLTNQ
+2024-11-12 19:35:43,356: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 19:35:43,357: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 19:35:43,357: INFO: API_logger: Payload details:None
+2024-11-12 19:35:43,357: INFO: API_logger: status code:200
+2024-11-12 19:35:43,357: INFO: API_logger: A21AAJSfjWbpvGpgjG1Hf6eS6tNHGdw3F6WQMI6nklPSI-7FOvvdFpmTergmdyh8UmtwsFh69_z41n9YFgDFZavtI4_j_inUA
+2024-11-12 19:51:17,782: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 19:51:17,782: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 19:51:17,783: INFO: API_logger: Payload details:None
+2024-11-12 19:51:17,783: INFO: API_logger: status code:200
+2024-11-12 19:51:17,783: INFO: API_logger: A21AAL9fg5jn8aq7qhkeNRHRkZyIXJrf-2pvBslVA9ZxJyeb2QYDWIF3ZP2KBqkbNX5Lzyx7EJtta8l8JsHecjWikx62FkCew
+2024-11-12 19:55:49,604: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 19:55:49,604: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 19:55:49,605: INFO: API_logger: Payload details:None
+2024-11-12 19:55:49,605: INFO: API_logger: status code:200
+2024-11-12 19:55:49,606: INFO: API_logger: A21AAKz8_ygvjvf3tl7qQ4j93Od1B790wSW3ShdQtIooMdrHD0pLbMlqtVUsxfOJWiD3k2nbtXJS8fABOIJOc3Ly1bQQhDZdg
+2024-11-12 19:55:50,525: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 19:55:50,526: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAKz8_ygvjvf3tl7qQ4j93Od1B790wSW3ShdQtIooMdrHD0pLbMlqtVUsxfOJWiD3k2nbtXJS8fABOIJOc3Ly1bQQhDZdg'},None
+2024-11-12 19:55:50,526: INFO: API_logger: Payload details:None
+2024-11-12 19:55:50,526: INFO: API_logger: status code:200
+2024-11-12 19:56:27,552: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 19:56:27,552: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 19:56:27,553: INFO: API_logger: Payload details:None
+2024-11-12 19:56:27,553: INFO: API_logger: status code:200
+2024-11-12 19:56:27,553: INFO: API_logger: A21AAKz8_ygvjvf3tl7qQ4j93Od1B790wSW3ShdQtIooMdrHD0pLbMlqtVUsxfOJWiD3k2nbtXJS8fABOIJOc3Ly1bQQhDZdg
+2024-11-12 23:39:03,515: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 23:39:03,515: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 23:39:03,516: INFO: API_logger: Payload details:None
+2024-11-12 23:39:03,516: INFO: API_logger: status code:200
+2024-11-12 23:39:03,517: INFO: API_logger: A21AAK-UpS2hck9a54p7NPZM-xNEWljz9WXO71JwQPQ0TgiV1sRO5_rBVQdmClA4XTcFqYKcwnKDdOcNiqAeBb4ng3BA_fX2g
+2024-11-12 23:39:04,539: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 23:39:04,540: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAK-UpS2hck9a54p7NPZM-xNEWljz9WXO71JwQPQ0TgiV1sRO5_rBVQdmClA4XTcFqYKcwnKDdOcNiqAeBb4ng3BA_fX2g'},None
+2024-11-12 23:39:04,540: INFO: API_logger: Payload details:None
+2024-11-12 23:39:04,541: INFO: API_logger: status code:200
+2024-11-12 23:39:27,783: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-12 23:39:27,783: INFO: API_logger: Header details:{'Content-Type': 'application/json'},None
+2024-11-12 23:39:27,784: INFO: API_logger: Payload details:None
+2024-11-12 23:39:27,784: INFO: API_logger: status code:200
+2024-11-12 23:39:27,784: INFO: API_logger: A21AAK-UpS2hck9a54p7NPZM-xNEWljz9WXO71JwQPQ0TgiV1sRO5_rBVQdmClA4XTcFqYKcwnKDdOcNiqAeBb4ng3BA_fX2g
+2024-11-12 23:39:28,706: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-12 23:39:28,706: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'Authorization': 'Bearer A21AAK-UpS2hck9a54p7NPZM-xNEWljz9WXO71JwQPQ0TgiV1sRO5_rBVQdmClA4XTcFqYKcwnKDdOcNiqAeBb4ng3BA_fX2g'},None
+2024-11-12 23:39:28,707: INFO: API_logger: Payload details:None
+2024-11-12 23:39:28,707: INFO: API_logger: status code:200
