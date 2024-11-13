@@ -38,6 +38,7 @@ def setup():
     #     config.option.htmlpath = f"{reports_dir}/report_{now}.html"
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def shared_data():
-    return {}
+    data = {}
+    yield data
