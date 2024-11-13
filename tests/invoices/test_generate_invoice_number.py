@@ -1,7 +1,6 @@
 import pytest
 
 
-# @pytest.fixture(scope="module")
 def test_generate_invoice_number(setup):
     response = setup.post("v2/invoicing/generate-next-invoice-number")
     assert response is not None, "Expected response, got None"

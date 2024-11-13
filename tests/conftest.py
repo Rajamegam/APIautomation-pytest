@@ -31,7 +31,6 @@ def setup():
 
     yield api_helper
 
-
     # @pytest.hookimpl(tryfirst=True)
     # def pytest_configure(config):
     #     reports_dir = "D://API automation//Restful_Booker_Automation//reports"
