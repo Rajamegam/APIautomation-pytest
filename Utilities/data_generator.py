@@ -1,7 +1,4 @@
-import pytest
-from tests.invoices.test_generate_invoice_number import test_generate_invoice_number
-
-
+# JSON for creating a draft invoice
 def create_draft_invoice(invoice_number):
     data = {
         "detail": {

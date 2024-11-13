@@ -9,7 +9,7 @@ class BaseClass:
 
     def __init__(self):
         self.logger = self.get_logger()
-        self.header = {'Content-Type': 'application/json'}
+        self.header = {'Content-Type': 'application/json', 'prefer': 'return=representation'}
         self.URL = config()['URL']['baseURL']
 
     def set_auth_token(self, token):
