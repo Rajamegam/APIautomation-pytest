@@ -8,7 +8,7 @@ from Utilities.configurations import *
 api_helper = BaseClass()
 
 
-@pytest.fixture(scope='module', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def setup():
     payloads = {
         "grant_type": "client_credentials",
@@ -36,3 +36,8 @@ def setup():
     #     reports_dir = "D://API automation//Restful_Booker_Automation//reports"
     #     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     #     config.option.htmlpath = f"{reports_dir}/report_{now}.html"
+
+
+@pytest.fixture()
+def shared_data():
+    return {}
