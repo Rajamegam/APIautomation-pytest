@@ -8,4 +8,7 @@ class TestCreateDraftInvoice:
         invoice_number = shared_data.get("invoice_number")
         draft_invoice_payload = create_draft_invoice(invoice_number)
         response = setup.post('v2/invoicing/invoices', payload=draft_invoice_payload)
+        response_json = response.json()
+        invoice_id = response_json.get("id")
+        shared_data[invoice_id] = invoice_id
         print(response.json())
