@@ -6,9 +6,11 @@ from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
 
 api_helper = BaseClass()
+pytest.invoice_number = ""
+pytest.invoice_id = ""
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope="function", autouse=True)
 def setup():
     payloads = {
         "grant_type": "client_credentials",
@@ -38,7 +40,7 @@ def setup():
     #     config.option.htmlpath = f"{reports_dir}/report_{now}.html"
 
 
-@pytest.fixture(scope="session")
-def shared_data():
-    data = {}
-    yield data
+# @pytest.fixture(scope="function")
+# def shared_data():
+#     data = {}
+#     return data

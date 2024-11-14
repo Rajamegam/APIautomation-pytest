@@ -1,8 +1,11 @@
 # JSON for creating a draft invoice
+from tests.invoices.test_generate_invoice_number import shared_data
+
+
 def create_draft_invoice(invoice_number):
     data = {
         "detail": {
-            "invoice_number": invoice_number,
+            "invoice_number": shared_data["invoice_number"],
             "invoice_date": "2022-02-04",
             "payment_term": {
                 "term_type": "NET_10",
