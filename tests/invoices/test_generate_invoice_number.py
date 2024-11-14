@@ -18,4 +18,3 @@ class TestGenerateInvoiceNumber:
         shared_data["invoice_number"] = invoice_number
         print(invoice_number)
         print(shared_data)
-        #return invoice_number
