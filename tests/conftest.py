@@ -10,6 +10,7 @@ pytest.invoice_number = ""
 pytest.invoice_id = ""
 
 
+# Function level fixture to log in and share the access token to set_auth_token function in baseclass
 @pytest.fixture(scope="function", autouse=True)
 def setup():
     payloads = {
@@ -40,6 +41,7 @@ def setup():
     #     config.option.htmlpath = f"{reports_dir}/report_{now}.html"
 
 
+# shared data fixture to store and retrieve the commonly used variable across the functions
 @pytest.fixture(scope="session")
 def shared_data():
     data = {}
