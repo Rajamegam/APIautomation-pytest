@@ -56,12 +56,15 @@ class BaseClass:
             self.logger.critical(f"POST request failed:{e}")
             return None
 
-    def put(self, endpoint, payload=None):
+    def put(self, endpoint, payload=None, params=None, auth=None, data=None):
         try:
-            response = requests.put(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
+            response = requests.put(f'{self.URL}/{endpoint}', headers=self.header, json=payload, params=params,
+                                    auth=auth, data=data)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
+            self.logger.info(f"Header details:{self.header},{self.set_auth_token(self)}")
             # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
+            self.logger.info(f"status code:{response.status_code}")
             try:
                 response.raise_for_status()
             except requests.exceptions.HTTPError as e:

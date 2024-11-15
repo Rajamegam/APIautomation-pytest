@@ -16,6 +16,7 @@ class TestGetInvoiceDetails:
         assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}"
         try:
             response_json = response.json()
+            setup.get_logger().info(response_json)
         except ValueError as e:
             setup.get_logger().critical(f"Failed to parse JSON response: {e}")
             pytest.fail(f"Failed to parse JSON response: {e}")
