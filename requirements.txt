@@ -4,3 +4,5 @@ pytest-html
 Faker~=30.8.2
 Logging
 pytest-dependency
+pytest-order
+pytest-ordering

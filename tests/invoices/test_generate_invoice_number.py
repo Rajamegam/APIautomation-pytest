@@ -2,13 +2,10 @@ import pytest
 
 from Utils.BaseClass import BaseClass
 
-shared_data = {}
-
 
 class TestGenerateInvoiceNumber:
-    # @pytest.mark.dependency(scope="session")
     @pytest.mark.order(1)
-    def test_generate_invoice_number(self, setup):
+    def test_generate_invoice_number(self, setup, shared_data):
         response = setup.post("v2/invoicing/generate-next-invoice-number")
         assert response is not None, "Expected response, got None"
         assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
