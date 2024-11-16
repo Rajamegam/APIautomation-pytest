@@ -23,3 +23,4 @@ class TestCreateDraftInvoice:
         assert invoice_id, "Invoice ID is missing in the response JSON"
         setup.get_logger().info(f"Generated Invoice ID is: {invoice_id}")
         shared_data["invoice_id"] = invoice_id
+
