@@ -4,6 +4,8 @@ from Utilities.data_generator import update_invoice_details
 
 
 class TestUpdateInvoiceDetails:
+    @pytest.mark.Regression
+    @pytest.mark.order(4)
     def test_update_invoice_details(self, setup, shared_data):
         invoice_id = shared_data.get("invoice_id")
         update_payload = update_invoice_details(invoice_id)

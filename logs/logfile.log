@@ -205,3 +205,77 @@
 2024-11-17 15:28:21,372: INFO: API_logger: status code:404
 2024-11-17 15:28:21,373: INFO: API_logger: PUT request failed:404 Client Error: Not Found for url: https://api-m.sandbox.paypal.com/v2/invoicing/invoices/INV2-USSZ-YJ98-RATL-LYZQ?send_to_recipient=true&send_to_invoicer=true
 2024-11-17 15:28:21,373: CRITICAL: API_logger: Expected status code 200 but received 404
+2024-11-17 16:13:37,882: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:13:37,882: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:13:37,882: INFO: API_logger: Payload details:None
+2024-11-17 16:13:37,882: INFO: API_logger: status code:200
+2024-11-17 16:13:37,882: INFO: API_logger: A21AAKJqj7Jt0fDPU28semeUMu_W7tHVs01pjyYh--CmAjXPohqOrUKm7eb5VhjYff8IMPIhXcI-WQYTaNEsT-7uhyPclnDBw
+2024-11-17 16:13:38,893: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:13:38,893: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:13:38,894: INFO: API_logger: Payload details:None
+2024-11-17 16:13:38,894: INFO: API_logger: status code:401
+2024-11-17 16:13:38,894: CRITICAL: API_logger: POST request failed:401 Client Error: Unauthorized for url: https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:21:14,813: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:21:14,814: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:21:14,814: INFO: API_logger: Payload details:None
+2024-11-17 16:21:14,814: INFO: API_logger: status code:200
+2024-11-17 16:21:14,814: INFO: API_logger: A21AAJC5JstjzdPHo4FPltA9vLOCzeJdQ_3E_hsIQc_Ye6Wwp5-H_MhfxVzLrr5E15sEzOpc8iiO0jDeTTozDkpmWWZmWCVRA
+2024-11-17 16:21:15,306: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:21:15,306: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:21:15,306: INFO: API_logger: Payload details:None
+2024-11-17 16:21:15,306: INFO: API_logger: status code:401
+2024-11-17 16:21:15,307: CRITICAL: API_logger: POST request failed:401 Client Error: Unauthorized for url: https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:33:34,509: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:33:34,510: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:33:34,510: INFO: API_logger: Payload details:None
+2024-11-17 16:33:34,510: INFO: API_logger: status code:200
+2024-11-17 16:33:34,510: INFO: API_logger: A21AAKfP13QoA-nJzwsOIwTWoWfD6w3f16xQQBGCKZDUPWX74RA-2yAv-eVKSUU7Ms33y9Tj3DoVtvKJK9CszKwcqfBYo38NQ
+2024-11-17 16:33:35,800: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:33:35,800: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:33:35,800: INFO: API_logger: Payload details:None
+2024-11-17 16:33:35,800: INFO: API_logger: status code:401
+2024-11-17 16:33:35,801: CRITICAL: API_logger: POST request failed:401 Client Error: Unauthorized for url: https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:35:42,468: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:35:42,469: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-11-17 16:35:42,469: INFO: API_logger: Payload details:None
+2024-11-17 16:35:42,469: INFO: API_logger: status code:200
+2024-11-17 16:35:42,469: INFO: API_logger: A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ
+2024-11-17 16:35:43,055: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/generate-next-invoice-number
+2024-11-17 16:35:43,055: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ'},None
+2024-11-17 16:35:43,056: INFO: API_logger: Payload details:None
+2024-11-17 16:35:43,056: INFO: API_logger: status code:200
+2024-11-17 16:35:43,056: INFO: API_logger: Generated invoice Number: 1731841462130
+2024-11-17 16:35:44,095: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:35:44,095: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer <Utils.BaseClass.BaseClass object at 0x000001E26E4B79E0>'},None
+2024-11-17 16:35:44,095: INFO: API_logger: Payload details:None
+2024-11-17 16:35:44,095: INFO: API_logger: status code:200
+2024-11-17 16:35:44,095: INFO: API_logger: A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ
+2024-11-17 16:35:44,901: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/invoices
+2024-11-17 16:35:44,902: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ'},None
+2024-11-17 16:35:44,902: INFO: API_logger: Payload details:{'detail': {'invoice_number': '1731841462130', 'invoice_date': '2022-02-04', 'payment_term': {'term_type': 'NET_10', 'due_date': '2022-02-14'}, 'currency_code': 'USD', 'reference': '<The reference data. Includes a post office (PO) number.>', 'note': '<A note to the invoice recipient. Also appears on the invoice notification email.>', 'terms_and_conditions': '<The general terms of the invoice. Can include return or cancellation policy and other terms and conditions.>', 'memo': '<A private bookkeeping note for merchant.>'}, 'invoicer': {'name': {'given_name': 'David', 'surname': 'Larusso'}, 'address': {'address_line_1': '123 Townsend St', 'address_line_2': 'Floor 6', 'admin_area_2': 'San Francisco', 'admin_area_1': 'CA', 'postal_code': '94107', 'country_code': 'US'}, 'phones': [{'country_code': '001', 'national_number': '4085551234', 'phone_type': 'MOBILE'}], 'website': 'www.example.com', 'tax_id': 'XX-XXXXXXX', 'logo_url': 'https://example.com/logo.png', 'additional_notes': '<Any additional information. Includes business hours.>'}, 'primary_recipients': [{'billing_info': {'name': {'given_name': 'Stephanie', 'surname': 'Meyers'}, 'address': {'address_line_1': '1234 Main Street', 'admin_area_2': 'Anytown', 'admin_area_1': 'CA', 'postal_code': '98765', 'country_code': 'US'}, 'email_address': 'foobuyer@example.com', 'phones': [{'country_code': '001', 'national_number': '4884551234', 'phone_type': 'HOME'}], 'additional_info_value': 'add-info'}, 'shipping_info': {'name': {'given_name': 'Stephanie', 'surname': 'Meyers'}, 'address': {'address_line_1': '1234 Main Street', 'admin_area_2': 'Anytown', 'admin_area_1': 'CA', 'postal_code': '98765', 'country_code': 'US'}}}], 'items': [{'name': 'Yoga Mat', 'description': 'Elastic mat to practice yoga.', 'quantity': '1', 'unit_amount': {'currency_code': 'USD', 'value': '50.00'}, 'tax': {'name': 'Sales Tax', 'percent': '7.25'}, 'discount': {'percent': '5'}, 'unit_of_measure': 'QUANTITY'}, {'name': 'Yoga t-shirt', 'quantity': '1', 'unit_amount': {'currency_code': 'USD', 'value': '10.00'}, 'tax': {'name': 'Sales Tax', 'percent': '7.25'}, 'discount': {'amount': {'currency_code': 'USD', 'value': '5.00'}}, 'unit_of_measure': 'QUANTITY'}], 'configuration': {'partial_payment': {'allow_partial_payment': True, 'minimum_amount_due': {'currency_code': 'USD', 'value': '20.00'}}, 'allow_tip': True, 'tax_calculated_after_discount': True, 'tax_inclusive': False}, 'amount': {'breakdown': {'custom': {'label': 'Packing Charges', 'amount': {'currency_code': 'USD', 'value': '10.00'}}, 'shipping': {'amount': {'currency_code': 'USD', 'value': '10.00'}, 'tax': {'name': 'Sales Tax', 'percent': '7.25'}}, 'discount': {'invoice_discount': {'percent': '5'}}}}}
+2024-11-17 16:35:44,903: INFO: API_logger: status code:201
+2024-11-17 16:35:44,903: INFO: API_logger: Generated Invoice ID is: INV2-6ARM-3ETT-ZFA4-J94U
+2024-11-17 16:35:45,923: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:35:45,924: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer <Utils.BaseClass.BaseClass object at 0x000001E26E4B79E0>'},None
+2024-11-17 16:35:45,924: INFO: API_logger: Payload details:None
+2024-11-17 16:35:45,924: INFO: API_logger: status code:200
+2024-11-17 16:35:45,924: INFO: API_logger: A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ
+2024-11-17 16:35:46,560: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/invoices/INV2-6ARM-3ETT-ZFA4-J94U
+2024-11-17 16:35:47,058: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:35:47,058: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ'},None
+2024-11-17 16:35:47,058: INFO: API_logger: Payload details:None
+2024-11-17 16:35:47,058: INFO: API_logger: status code:200
+2024-11-17 16:35:47,059: INFO: API_logger: A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ
+2024-11-17 16:35:47,499: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/invoices/INV2-6ARM-3ETT-ZFA4-J94U
+2024-11-17 16:35:47,500: INFO: API_logger: GET request failed:404 Client Error: Not Found for url: https://api-m.sandbox.paypal.com/v2/invoicing/invoices/INV2-6ARM-3ETT-ZFA4-J94U
+2024-11-17 16:35:48,098: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-11-17 16:35:48,098: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ'},None
+2024-11-17 16:35:48,098: INFO: API_logger: Payload details:None
+2024-11-17 16:35:48,099: INFO: API_logger: status code:200
+2024-11-17 16:35:48,099: INFO: API_logger: A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ
+2024-11-17 16:35:49,229: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v2/invoicing/invoices/INV2-6ARM-3ETT-ZFA4-J94U
+2024-11-17 16:35:49,230: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAIVDQ0mnkaOIvkHtRTJI9E3WPNl1exeexqnqFbYsk_gYnxiPc3fnAQYhAYQ5-GVga7nrB--7xS9Z3kOe7F3q3TIKwH3JQ'},None
+2024-11-17 16:35:49,230: INFO: API_logger: Payload details:{'id': 'INV2-6ARM-3ETT-ZFA4-J94U', 'status': 'DRAFT', 'detail': {'invoice_number': 0.4219375005481364, 'reference': 'deal-reference-update', 'invoice_date': '2018-11-12', 'currency_code': 'USD', 'note': 'Thank you for your business.', 'term': 'No refunds after 30 days.', 'memo': 'This is a long contract', 'payment_term': {'term_type': 'NET_10', 'due_date': '2018-11-22'}}, 'invoicer': {'name': {'given_name': 'David', 'surname': 'Larusso'}, 'address': {'address_line_1': '1234 First Street', 'address_line_2': '337673 Hillside Court', 'admin_area_2': 'Anytown', 'admin_area_1': 'CA', 'postal_code': '98765', 'country_code': 'US'}, 'phones': [{'country_code': '001', 'national_number': '4085551234', 'phone_type': 'MOBILE'}], 'website': 'www.test.com', 'tax_id': 'ABcNkWSfb5ICTt73nD3QON1fnnpgNKBy-Jb5SeuGj185MNNw6g', 'logo_url': 'https://example.com/logo.PNG', 'additional_notes': '2-4'}, 'primary_recipients': [{'billing_info': {'name': {'given_name': 'Stephanie', 'surname': 'Meyers'}, 'address': {'address_line_1': '1234 Main Street', 'admin_area_2': 'Anytown', 'admin_area_1': 'CA', 'postal_code': '98765', 'country_code': 'US'}, 'email_address': 'foobuyer@gmail.com', 'phones': [{'country_code': '001', 'national_number': '4884551234', 'phone_type': 'HOME'}], 'additional_info_value': 'add-info'}, 'shipping_info': {'name': {'given_name': 'Stephanie', 'surname': 'Meyers'}, 'address': {'address_line_1': '1234 Main Street', 'admin_area_2': 'Anytown', 'admin_area_1': 'CA', 'postal_code': '98765', 'country_code': 'US'}}}], 'items': [{'name': 'Yoga Mat', 'description': 'Elastic mat to practice yoga.', 'quantity': '1', 'unit_amount': {'currency_code': 'USD', 'value': '50.00'}, 'tax': {'name': 'Sales Tax', 'percent': '7.25', 'amount': {'currency_code': 'USD', 'value': '3.27'}}, 'discount': {'percent': '5', 'amount': {'currency_code': 'USD', 'value': '2.5'}}, 'unit_of_measure': 'QUANTITY'}, {'name': 'Yoga t-shirt', 'quantity': '1', 'unit_amount': {'currency_code': 'USD', 'value': '10.00'}, 'tax': {'name': 'Sales Tax', 'percent': '7.25', 'amount': {'currency_code': 'USD', 'value': '0.34'}}, 'discount': {'amount': {'currency_code': 'USD', 'value': '5.00'}}, 'unit_of_measure': 'QUANTITY'}], 'configuration': {'partial_payment': {'allow_partial_payment': True, 'minimum_amount_due': {'currency_code': 'USD', 'value': '20.00'}}, 'allow_tip': True, 'tax_calculated_after_discount': True, 'tax_inclusive': False}, 'amount': {'currency_code': 'USD', 'value': '74.21', 'breakdown': {'item_total': {'currency_code': 'USD', 'value': '60.00'}, 'custom': {'label': 'Packing Charges', 'amount': {'currency_code': 'USD', 'value': '10.00'}}, 'shipping': {'amount': {'currency_code': 'USD', 'value': '10.00'}, 'tax': {'name': 'Sales Tax', 'percent': '7.25', 'amount': {'currency_code': 'USD', 'value': '0.73'}}}, 'discount': {'item_discount': {'currency_code': 'USD', 'value': '-7.50'}, 'invoice_discount': {'percent': '5', 'amount': {'currency_code': 'USD', 'value': '-2.63'}}}, 'tax_total': {'currency_code': 'USD', 'value': '4.34'}}}}
+2024-11-17 16:35:49,230: INFO: API_logger: status code:404
+2024-11-17 16:35:49,230: INFO: API_logger: PUT request failed:404 Client Error: Not Found for url: https://api-m.sandbox.paypal.com/v2/invoicing/invoices/INV2-6ARM-3ETT-ZFA4-J94U?send_to_recipient=true&send_to_invoicer=true
+2024-11-17 16:35:49,231: CRITICAL: API_logger: Expected status code 200 but received 404

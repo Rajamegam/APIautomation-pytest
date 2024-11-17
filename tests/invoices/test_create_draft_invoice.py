@@ -3,6 +3,7 @@ from Utilities.data_generator import create_draft_invoice
 
 
 class TestCreateDraftInvoice:
+    @pytest.mark.Regression
     @pytest.mark.order(2)
     def test_create_draft_invoice(self, setup, shared_data):
         invoice_number = shared_data.get("invoice_number")

@@ -4,6 +4,7 @@ from Utils.BaseClass import BaseClass
 
 
 class TestGenerateInvoiceNumber:
+    @pytest.mark.Regression
     @pytest.mark.order(1)
     def test_generate_invoice_number(self, setup, shared_data):
         try:
@@ -22,3 +23,9 @@ class TestGenerateInvoiceNumber:
         invoice_number = response_json["invoice_number"]
         setup.get_logger().info(f"Generated invoice Number: {invoice_number}")
         shared_data["invoice_number"] = invoice_number
+
+    def test_generate_invoice_number_unauthorized(self, setup):
+        setup.header.pop("Authorization", None)
+
+        response = setup.post("v2/invoicing/generate-next-invoice-number")
+        assert response.status_code == 401

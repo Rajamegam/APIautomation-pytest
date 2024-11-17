@@ -2,6 +2,7 @@ import pytest
 
 
 class TestGetInvoiceDetails:
+    @pytest.mark.Regression
     @pytest.mark.order(3)
     def test_get_invoice_details(self, setup, shared_data):
         invoice_id = shared_data.get("invoice_id")
@@ -25,3 +26,4 @@ class TestGetInvoiceDetails:
             f"Invoice ID mismatch: expected {invoice_id}, but got {response_invoice_id}"
         )
         setup.get_logger().info(f"Successfully retrieved invoice details for ID: {invoice_id}")
+
