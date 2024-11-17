@@ -1,5 +1,6 @@
 #Ignore all .log files
 *.log
 
-D:\API automation\Restful_Booker_Automation\Utilities\properties.ini
+#Ignore properities file
+Utilities/properties.ini
 
