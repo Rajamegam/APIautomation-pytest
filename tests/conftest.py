@@ -6,8 +6,8 @@ from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
 
 api_helper = BaseClass()
-pytest.invoice_number = ""
-pytest.invoice_id = ""
+# pytest.invoice_number = ""
+# pytest.invoice_id = ""
 
 
 # Function level fixture to log in and share the access token to set_auth_token function in baseclass
@@ -35,11 +35,11 @@ def setup():
     yield api_helper
 
 
-@pytest.hookimpl(tryfirst=True)
-def pytest_configure(config):
-    reports_dir = "D://API automation//Restful_Booker_Automation//reports"
-    now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    config.option.htmlpath = f"{reports_dir}/Automation report_{now}.html"
+# @pytest.hookimpl(tryfirst=True)
+# def pytest_configure(config):
+#     reports_dir = "D://API automation//Restful_Booker_Automation//reports"
+#     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+#     config.option.htmlpath = f"{reports_dir}/Automation report_{now}.html"
 
 
 # shared data fixture to store and retrieve the commonly used variable across the functions
