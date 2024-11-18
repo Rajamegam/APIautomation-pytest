@@ -1,5 +1,7 @@
 import pytest
 
+from Utilities.configurations import config
+
 
 class TestGetInvoiceDetails:
     get_all_invoice_params = {"page": "1", "page_size": "10", "total_required": "true", "fields": "amount"}
@@ -13,7 +15,9 @@ class TestGetInvoiceDetails:
         if not invoice_id:
             pytest.fail("Invoice ID not found in shared data")
         try:
-            response = setup.get(endpoint=f"v2/invoicing/invoices/{invoice_id}")
+            response = setup.get(
+                endpoint=f"{config()['invoice endpoints']['invoice']}/{invoice_id}"
+            )
         except Exception as e:
             setup.get_logger().error(f"Request to get invoice details failed: {e}")
             pytest.fail(f"Request to get invoice details failed: {e}")
@@ -34,7 +38,7 @@ class TestGetInvoiceDetails:
     # Get all the invoice details and check whether invoice ID and invoice number is present in the list
     def test_get_all_invoice_details(self, setup, shared_data):
         try:
-            response = setup.get(endpoint="v2/invoicing/invoices", params=self.get_all_invoice_params)
+            response = setup.get(endpoint=config()['invoice endpoints']['invoice'], params=self.get_all_invoice_params)
         except Exception as e:
             setup.get_logger().critical(f"Request to get the invoice list{e}")
             pytest.fail("Request to get the invoice list")

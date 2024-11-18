@@ -1,5 +1,6 @@
 import pytest
 
+from Utilities.configurations import config
 from Utilities.data_generator import update_invoice_details
 
 
@@ -10,7 +11,7 @@ class TestUpdateInvoiceDetails:
         invoice_id = shared_data.get("invoice_id")
         update_payload = update_invoice_details(invoice_id)
         try:
-            response = setup.put(endpoint=f"v2/invoicing/invoices/{shared_data["invoice_id"]}",
+            response = setup.put(endpoint=f"{config()['invoice endpoints']['invoice']}/{invoice_id}",
                                  params={"send_to_recipient": "true", "send_to_invoicer": "true"},
                                  payload=update_payload)
         except Exception as e:

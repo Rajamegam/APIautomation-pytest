@@ -1,6 +1,8 @@
 import pytest
 
+from Utilities.configurations import config
 from Utils.BaseClass import BaseClass
+from Utilities import *
 
 
 class TestGenerateInvoiceNumber:
@@ -8,7 +10,7 @@ class TestGenerateInvoiceNumber:
     @pytest.mark.order(1)
     def test_generate_invoice_number(self, setup, shared_data):
         try:
-            response = setup.post("v2/invoicing/generate-next-invoice-number")
+            response = setup.post(config()["invoice endpoints"]["generate invoice number"])
         except Exception as e:
             setup.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")

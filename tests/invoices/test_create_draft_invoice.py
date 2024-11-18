@@ -1,4 +1,6 @@
 import pytest
+
+from Utilities.configurations import config
 from Utilities.data_generator import create_draft_invoice
 
 
@@ -9,7 +11,7 @@ class TestCreateDraftInvoice:
         invoice_number = shared_data.get("invoice_number")
         draft_invoice_payload = create_draft_invoice(invoice_number)
         try:
-            response = setup.post('v2/invoicing/invoices', payload=draft_invoice_payload)
+            response = setup.post(config()["invoice endpoints"]["invoice"], payload=draft_invoice_payload)
         except Exception as e:
             setup.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
@@ -24,4 +26,3 @@ class TestCreateDraftInvoice:
         assert invoice_id, "Invoice ID is missing in the response JSON"
         setup.get_logger().info(f"Generated Invoice ID is: {invoice_id}")
         shared_data["invoice_id"] = invoice_id
-
