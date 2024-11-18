@@ -1,6 +1,7 @@
 import pytest
 
 from Utilities.configurations import config
+from Utils.Assertions import AssertionUtils
 from Utils.BaseClass import BaseClass
 from Utilities import *
 
@@ -15,6 +16,7 @@ class TestGenerateInvoiceNumber:
             setup.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
         assert response is not None, setup.get_logger().critical("Expected response, got None")
+        AssertionUtils.assert_status_code(response,200)
         assert response.status_code == 200, setup.get_logger().critical(
             f"Expected status code 200, got {response.status_code}"
         )
