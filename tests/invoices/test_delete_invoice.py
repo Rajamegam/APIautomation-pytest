@@ -7,7 +7,7 @@ from Utils.Assertions import AssertionUtils
 class TestDeleteInvoiceDetails:
     @pytest.mark.Regression
     @pytest.mark.order(5)
-    #@pytest.mark.skip(reason=None)
+    # @pytest.mark.skip(reason=None)
     def test_delete_invoice_details(self, setup, shared_data):
         invoice_id = shared_data.get("invoice_id")
         try:
@@ -18,5 +18,3 @@ class TestDeleteInvoiceDetails:
             setup.get_logger().critical(f"Cannot delete invoice{e}")
             pytest.fail("Cannot delete invoice")
         AssertionUtils.assert_status_code(response, 204)
-
-        #assert response.status_code == 204
