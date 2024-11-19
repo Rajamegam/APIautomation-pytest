@@ -6,6 +6,11 @@ from Utils.Assertions import AssertionUtils
 
 
 class TestCreateDraftInvoice:
+
+    """ Creates the draft invoice
+        get the invoice number from the shared data fixture
+        insert the generated invoice ID in the shared data fixture for access for other tests
+    """
     @pytest.mark.Regression
     @pytest.mark.order(2)
     def test_create_draft_invoice(self, setup, shared_data):
@@ -16,10 +21,8 @@ class TestCreateDraftInvoice:
         except Exception as e:
             setup.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
-        assert response is not None, "Expected response, but got None"
+        AssertionUtils.presence_of_response(response)
         AssertionUtils.assert_status_code(response, 201)
-
-        # assert response.status_code == 201, f"Expected 200, but got {response.status_code}"
         try:
             response_json = response.json()
         except ValueError as e:

@@ -5,6 +5,9 @@ from Utils.Assertions import AssertionUtils
 
 
 class TestGetInvoiceDetails:
+    """ Function to get all the invoice details by passing the invoice ID.
+        Invoice ID is retrieved from the shared data fixture
+    """
     get_all_invoice_params = {"page": "1", "page_size": "10", "total_required": "true", "fields": "amount"}
     id_list = []
 

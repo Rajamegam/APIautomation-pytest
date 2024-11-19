@@ -5,6 +5,8 @@ from Utils.Assertions import AssertionUtils
 
 
 class TestDeleteInvoiceDetails:
+    """Function to delete the invoice generated"""
+
     @pytest.mark.Regression
     @pytest.mark.order(5)
     # @pytest.mark.skip(reason=None)
