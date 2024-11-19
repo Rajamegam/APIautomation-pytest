@@ -32,7 +32,13 @@ def setup():
 
     yield api_helper
 
-@pytest.fixture(scope='session', autouse=True)
+
+""" This is a basic authorization
+
+ """
+
+
+@pytest.fixture(scope='session', autouse=False)
 def basic_auth():
     response = api_helper.post('auth', payload={
         "username": config()['credentials']['username'],
@@ -42,7 +48,7 @@ def basic_auth():
     token = response_data.get("token")
     api_helper.get_logger().info(token)
     if token:
-        api_helper.set_cookie_token(token)
+        api_helper.set_auth_token(token)
     else:
         pytest.fail("Authentication failed; token not retrieved")
 
@@ -61,6 +67,3 @@ def pytest_configure(config):
 def shared_data():
     data = {}
     return data
-
-
-

@@ -103,3 +103,5 @@ class BaseClass:
         except requests.exceptions.RequestException as e:
             self.logger.critical(f"PATCH request failed{e}")
             return None
+
+
