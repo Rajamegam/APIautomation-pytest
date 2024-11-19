@@ -1,6 +1,7 @@
 import pytest
 
 from Utilities.configurations import config
+from Utils.Assertions import AssertionUtils
 
 
 class TestGetInvoiceDetails:
@@ -22,7 +23,8 @@ class TestGetInvoiceDetails:
             setup.get_logger().error(f"Request to get invoice details failed: {e}")
             pytest.fail(f"Request to get invoice details failed: {e}")
         assert response is not None, "Expected response, but got None"
-        assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}"
+        AssertionUtils.assert_status_code(response,200)
+        # assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}"
         try:
             response_json = response.json()
             setup.get_logger().info(response_json)
@@ -43,6 +45,7 @@ class TestGetInvoiceDetails:
             setup.get_logger().critical(f"Request to get the invoice list{e}")
             pytest.fail("Request to get the invoice list")
         response_details = response.json()
+        AssertionUtils.assert_status_code(response,200)
         self.id_list = [data["id"] for data in response_details["items"]]
         setup.get_logger().info(f"List of invoice ID: {self.id_list}")
         setup.get_logger().info(f"{shared_data.get("invoice_id")} is present in the list" if shared_data.get(

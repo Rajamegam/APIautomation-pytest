@@ -2,6 +2,7 @@ import pytest
 
 from Utilities.configurations import config
 from Utilities.data_generator import create_draft_invoice
+from Utils.Assertions import AssertionUtils
 
 
 class TestCreateDraftInvoice:
@@ -16,7 +17,9 @@ class TestCreateDraftInvoice:
             setup.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
         assert response is not None, "Expected response, but got None"
-        assert response.status_code == 201, f"Expected 200, but got {response.status_code}"
+        AssertionUtils.assert_status_code(response, 201)
+
+        # assert response.status_code == 201, f"Expected 200, but got {response.status_code}"
         try:
             response_json = response.json()
         except ValueError as e:

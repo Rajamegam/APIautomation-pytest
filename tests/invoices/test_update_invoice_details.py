@@ -2,6 +2,7 @@ import pytest
 
 from Utilities.configurations import config
 from Utilities.data_generator import update_invoice_details
+from Utils.Assertions import AssertionUtils
 
 
 class TestUpdateInvoiceDetails:
@@ -17,7 +18,9 @@ class TestUpdateInvoiceDetails:
         except Exception as e:
             setup.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
-        assert response.status_code == 200, setup.get_logger().critical(
-            f"Expected status code 200 but received {response.status_code}")
+        AssertionUtils.assert_status_code(response, 200)
+
+        # assert response.status_code == 200, setup.get_logger().critical(
+        #     f"Expected status code 200 but received {response.status_code}")
         response_json = response.json()
         setup.get_logger().info(response_json)

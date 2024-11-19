@@ -17,9 +17,6 @@ class TestGenerateInvoiceNumber:
             pytest.fail(f"Request failed: {e}")
         assert response is not None, setup.get_logger().critical("Expected response, got None")
         AssertionUtils.assert_status_code(response,200)
-        assert response.status_code == 200, setup.get_logger().critical(
-            f"Expected status code 200, got {response.status_code}"
-        )
         response_json = response.json()
         assert "invoice_number" in response_json, setup.get_logger().critical(
             "Response JSON does not contain 'invoice_number'"

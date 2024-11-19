@@ -1,6 +1,7 @@
 import pytest
 
 from Utilities.configurations import config
+from Utils.Assertions import AssertionUtils
 
 
 class TestDeleteInvoiceDetails:
@@ -16,4 +17,6 @@ class TestDeleteInvoiceDetails:
         except Exception as e:
             setup.get_logger().critical(f"Cannot delete invoice{e}")
             pytest.fail("Cannot delete invoice")
-        assert response.status_code == 204
+        AssertionUtils.assert_status_code(response, 204)
+
+        #assert response.status_code == 204
