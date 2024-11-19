@@ -79,7 +79,6 @@ class BaseClass:
         try:
             response = requests.delete(f'{self.URL}/{endpoint}', headers=self.header)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             try:
                 response.raise_for_status()
             except requests.exceptions.HTTPError as e:
@@ -93,7 +92,6 @@ class BaseClass:
         try:
             response = requests.patch(f'{self.URL}/{endpoint}', headers=self.header, json=payload)
             self.logger.info(f"URL details:{self.URL}/{endpoint}")
-            # self.logger.info(f"Header details:{self.header},{self.set_cookie_token(self)}")
             self.logger.info(f"Payload details:{payload}")
             try:
                 response.raise_for_status()
@@ -103,5 +101,3 @@ class BaseClass:
         except requests.exceptions.RequestException as e:
             self.logger.critical(f"PATCH request failed{e}")
             return None
-
-
