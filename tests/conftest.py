@@ -18,7 +18,7 @@ def setup():
         "return_client_metadata": "true",
         "return_unconsented_scopes": "true"
     }
-    response = api_helper.post("v1/oauth2/token", data=payloads,
+    response = api_helper.post(endpoint=config()["invoice endpoints"]["login endpoint"], data=payloads,
                                auth=(
                                    config()['client details']['Client ID'],
                                    config()['client details']['Client Secret']))
