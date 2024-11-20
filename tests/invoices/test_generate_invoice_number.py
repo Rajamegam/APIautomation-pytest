@@ -28,7 +28,6 @@ class TestGenerateInvoiceNumber:
         )
         invoice_number = response_json["invoice_number"]
         setup.get_logger().info(f"Generated invoice Number: {invoice_number}")
-        print("invoice_number", invoice_number)
         shared_data["invoice_number"] = invoice_number
 
     def test_generate_invoice_number_unauthorized(self, setup):
