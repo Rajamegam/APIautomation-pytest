@@ -7,3 +7,4 @@ pytest-dependency
 pytest-order
 pytest-ordering
 allure-pytest
+pytest-send-email
