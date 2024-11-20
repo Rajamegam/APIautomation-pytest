@@ -3,10 +3,10 @@ name: Regression suite
 on: 
   push:
     branches:
-      -main
+      - main
   pull_request:
     branches:
-      -main
+      - main
   schedule:
     - cron: '30 20 * * *'
 
@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v3
     
       - name: Set up Python
-        uses: python@v2
+        uses: actions/setup-python@v2
         with:
           python-version: '3.12.2'
     
@@ -30,41 +30,12 @@ jobs:
     
       - name: Run tests
         run: |
-          pytest
+          pytest --html=report.html --self-contained-html
+        env:
+          PYTHONPATH: ${{ github.workspace }}
     
-      - name: Upload report
+      - name: Upload pytest report
         uses: actions/upload-artifact@v3
         with: 
-          name: pytest -report
+          name: pytest-report
           path: report.html
-          
-        
-        
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  
-    
-
