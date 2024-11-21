@@ -1,7 +1,9 @@
 import configparser
+import os
 
 
 def config():
     config = configparser.ConfigParser()
-    config.read("D:/API automation/Restful_Booker_Automation/Utilities/properties.ini")
+    config_path = os.path.join(os.path.dirname(__file__), "properties.ini")
+    config.read(config_path)
     return config
