@@ -30,7 +30,7 @@ jobs:
     
       - name: Run tests
         run: |
-          pytest
+          pytest --html=report.html --self-contained-html
         # env:
         #   PYTHONPATH: ${{ github.workspace }}
     
