@@ -2,5 +2,5 @@
 *.log
 
 #Ignore properities file
-Utilities/properties.ini
+# Utilities/properties.ini
 
