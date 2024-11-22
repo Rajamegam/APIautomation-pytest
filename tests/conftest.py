@@ -4,7 +4,6 @@ import pytest
 import requests
 from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
-from pytest_metadata.plugin import metadata_key
 
 api_helper = BaseClass()
 
@@ -60,8 +59,7 @@ def basic_auth():
 def pytest_configure(config):
     reports_dir = "D://API automation//Restful_Booker_Automation//reports"
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    config.option.htmlpath = f"{reports_dir}/Automation report_{now}.html"
-    config.stash[metadata_key]["Project"] = "Paypal Sandbox API automation"
+    config.option.htmlpath = os.path.join(reports_dir, f"Automation report_{now}.html")
 
 
 # shared data fixture to store and retrieve the commonly used variable across the functions
