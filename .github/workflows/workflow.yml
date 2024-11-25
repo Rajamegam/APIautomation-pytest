@@ -52,8 +52,8 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Pytest Automation Report"
-          to: "recipient@example.com" # Replace with recipient email
-          from: "sender@example.com" # Replace with sender email
+          to: "rajamegam7@gmail.com" # Replace with recipient email
+          from: "rajamegam.govindaraj@ideas2it.com" # Replace with sender email
           content_type: text/html
           body: |
             <p>Hi,</p>
