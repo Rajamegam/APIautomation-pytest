@@ -35,6 +35,8 @@ jobs:
           TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
           REPORT_FILE="$REPORT_DIR/Automation_report_$TIMESTAMP.html"
           pytest --html=$REPORT_FILE --self-contained-html
+          echo "Generated report: $REPORT_FILE"
+          ls -l $REPORT_DIR  # List files in the reports directory
           echo "REPORT_FILE=$REPORT_FILE" >> $GITHUB_ENV
 
       - name: Upload pytest report
