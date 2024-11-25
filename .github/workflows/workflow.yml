@@ -32,9 +32,26 @@ jobs:
         run: |
           pytest --html=report.html --self-contained-html
          
-    
       - name: Upload pytest report
         uses: actions/upload-artifact@v3
-        with: 
+        with:
           name: pytest-report
           path: report.html
+
+      - name: Send Email with Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Email configuration
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Pytest Automation Report"
+          to: "rajamegam7@gmail.com"
+          from: "rajamegam.govindaraj@ideas2it.com"
+          content_type: text/html
+          body: |
+            <p>Hi,</p>
+            <p>Please find the attached automation report.</p>
+            <p>Thanks,</p>
+          attachments: report.html

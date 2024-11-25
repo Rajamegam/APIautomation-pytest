@@ -4,6 +4,7 @@ import pytest
 import requests
 from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
+from Utils.email_utils import send_email
 
 api_helper = BaseClass()
 
