@@ -7,7 +7,6 @@ from email.mime.text import MIMEText
 
 
 def get_latest_report(reports_dir):
-    """Fetch the most recent report file from the given directory."""
     try:
         # List all files in the reports directory
         files = [os.path.join(reports_dir, f) for f in os.listdir(reports_dir) if f.endswith(".html")]
@@ -55,10 +54,8 @@ def send_email(sender_email, receiver_email, subject, report_path, smtp_server, 
 
 
 if __name__ == "__main__":
-    # Directory where reports are stored
     reports_dir = "reports"
 
-    # Get the most recent report file
     report_path = get_latest_report(reports_dir)
 
     if report_path:
