@@ -56,7 +56,7 @@ jobs:
           from: "rajamegam.govindaraj@ideas2it.com" # Replace with sender email
           content_type: text/html
           body: |
-            <p>Hi,</p>
-            <p>Please find the attached automation report.</p>
-            <p>Thanks,</p>
+            Hi,
+            Please find the attached automation report.
+            Thanks,
           attachments: ${{ env.REPORT_FILE }}
