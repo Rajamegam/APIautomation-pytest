@@ -8,14 +8,12 @@ from email.mime.text import MIMEText
 
 def get_latest_report(reports_dir):
     try:
-        # List all files in the reports directory
         files = [os.path.join(reports_dir, f) for f in os.listdir(reports_dir) if f.endswith(".html")]
 
         if not files:
             print("No report files found in the directory.")
             return None
 
-        # Find the latest file based on modification time
         latest_file = max(files, key=os.path.getmtime)
         return latest_file
     except Exception as e:
