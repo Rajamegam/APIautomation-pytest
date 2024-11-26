@@ -48,7 +48,7 @@ jobs:
             Please find the attached automation report.
             Thanks,
         run: |
-          python send_email.py
+          python Utils/email_utils.py
 
      
 
