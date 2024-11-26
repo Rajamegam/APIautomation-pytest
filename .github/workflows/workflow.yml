@@ -1,78 +1,17 @@
-#name: Regression suite
-#
-#on:
-#  push:
-#    branches:
-#      - master
-#  pull_request:
-#    branches:
-#      - master
-#  schedule:
-#    - cron: '30 20 * * *'
-#
-#jobs:
-#  run-tests:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      - name: Set up Python
-#        uses: actions/setup-python@v2
-#        with:
-#          python-version: '3.12.2'
-#
-#      - name: Install dependencies
-#        run: |
-#          python -m pip install --upgrade pip
-#          pip install -r requirements.txt
-#
-#      - name: Run tests
-#        run: |
-#          REPORT_DIR="reports"
-#          mkdir -p $REPORT_DIR
-#          TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
-#          REPORT_FILE="$REPORT_DIR/Automation_report_$TIMESTAMP.html"
-#          pytest --html=$REPORT_FILE --self-contained-html
-#          echo "Generated report: $REPORT_FILE"
-#          ls -l $REPORT_DIR  # List files in the reports directory
-#          echo "REPORT_FILE=$REPORT_FILE" >> $GITHUB_ENV
-#
-#      - name: Upload pytest report
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: pytest-report
-#          path: ${{ env.REPORT_FILE }}
-#
-#      - name: Send Email with Report
-#        uses: dawidd6/action-send-mail@v3
-#        with:
-#          server_address: smtp.gmail.com
-#          server_port: 587
-#          username: ${{ secrets.EMAIL_USERNAME }}
-#          password: ${{ secrets.EMAIL_PASSWORD }}
-#          subject: "Pytest Automation Report"
-#          to: "rajamegam7@gmail.com"
-#          from: "rajamegam.govindaraj@ideas2it.com"
-#          content_type: text/html
-#          body: |
-#            Hi,
-#            Please find the attached automation report.
-#            Thanks,
-#          attachments: ${{ env.REPORT_FILE }}
-
-name: Run Pytest and Send Report
+name: Regression suite
 
 on:
   push:
     branches:
-      - main  # Run this workflow on pushes to the main branch
-  pull_request:  # Optional: Run on pull requests
-  workflow_dispatch:  # Allow manual triggering of the workflow
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: '30 20 * * *'
 
 jobs:
-  test-and-email:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -80,14 +19,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
-          python-version: "3.12.2"
+          python-version: '3.12.2'
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest pytest-html
 
       - name: Run Pytest
         run: |
@@ -110,3 +49,54 @@ jobs:
             Thanks,
         run: |
           python send_email.py
+
+     
+
+#name: Run Pytest and Send Report
+#
+#on:
+#  push:
+#    branches:
+#      - main  # Run this workflow on pushes to the main branch
+#  pull_request:  # Optional: Run on pull requests
+#  workflow_dispatch:  # Allow manual triggering of the workflow
+#
+#jobs:
+#  test-and-email:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Set up Python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: "3.12.2"
+#
+#      - name: Install dependencies
+#        run: |
+#          pip install -r requirements.txt
+#          pip install pytest pytest-html
+#
+#      - name: Run Pytest
+#        run: |
+#          TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
+#          pytest --html=reports/report_$TIMESTAMP.html --self-contained-html
+#
+#      - name: Send Test Report via Email
+#        env:
+#          SMTP_SERVER: smtp.gmail.com
+#          SMTP_PORT: 587
+#          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+#          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+#          subject: "Pytest Automation Report"
+#          to: "rajamegam7@gmail.com"
+#          from: "rajamegam.govindaraj@ideas2it.com"
+#          content_type: text/html
+#          body: |
+#            Hi,
+#            Please find the attached automation report.
+#            Thanks,
+#        run: |
+#          python send_email.py
