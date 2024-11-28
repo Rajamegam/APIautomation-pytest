@@ -4,6 +4,8 @@ from datetime import datetime
 
 import boto3
 
+from Utilities.configurations import config
+
 
 class logUtils:
     def __init__(self):
@@ -14,7 +16,6 @@ class logUtils:
     @staticmethod
     def get_logger():
         logdir = os.path.join(os.getcwd(), "logs")
-        # os.mkdir(logdir)
         log_file = os.path.join(logdir, f"logfile_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log")
         logger = logging.getLogger("API_logger")
         if not logger.handlers:
@@ -29,8 +30,8 @@ class logUtils:
     def upload_logs_to_s3(self):
         client = boto3.client(
             "s3",
-            aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-            aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
+            aws_access_key_id=config()["AWS credentials"]["AWS_ACCESS_KEY_ID"],
+            aws_secret_access_key=config()["AWS credentials"]["AWS_SECRET_ACCESS_KEY"],
             region_name=os.getenv("AWS_REGION", "us-east-1"),
         )
         try:
