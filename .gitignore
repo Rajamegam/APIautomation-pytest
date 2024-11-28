@@ -1,5 +1,5 @@
 #Ignore all .log files
-/log
+*.log
 
 #Ignore properities file
 # Utilities/properties.ini
