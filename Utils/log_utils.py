@@ -7,7 +7,7 @@ import boto3
 
 class logUtils:
     def __init__(self):
-        self.S3_BUCKET_NAME = ""
+        self.S3_BUCKET_NAME = "pytestautomationlogs"
         self.LOG_FILE_NAME = f"log_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
         self.LOCAL_LOG_FILE_PATH = f"./logs/{self.LOG_FILE_NAME}"
 
