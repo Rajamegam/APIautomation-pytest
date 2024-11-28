@@ -2,6 +2,7 @@ import pytest
 
 from Utilities.configurations import config
 from Utils.Assertions import AssertionUtils
+from Utils.log_utils import logUtils
 
 
 class TestDeleteInvoiceDetails:
@@ -17,6 +18,6 @@ class TestDeleteInvoiceDetails:
                 endpoint=f"{config()['invoice endpoints']['invoice']}/{invoice_id}"
             )
         except Exception as e:
-            setup.get_logger().critical(f"Cannot delete invoice{e}")
+            logUtils.get_logger().critical(f"Cannot delete invoice{e}")
             pytest.fail("Cannot delete invoice")
         AssertionUtils.assert_status_code(response, 204)

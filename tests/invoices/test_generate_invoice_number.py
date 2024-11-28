@@ -4,12 +4,13 @@ from Utilities.configurations import config
 from Utils.Assertions import AssertionUtils
 from Utils.BaseClass import BaseClass
 from Utilities import *
+from Utils.log_utils import logUtils
 
 
 class TestGenerateInvoiceNumber:
     """ This test function is used to generate invoice number.
     Once the invoice is generated, the invoice number is
-    appended in the shared data fixture to access anywhere in the test
+    appended in the shared data fixture to access anywhere in the test method
     """
 
     @pytest.mark.Regression
@@ -18,16 +19,16 @@ class TestGenerateInvoiceNumber:
         try:
             response = setup.post(config()["invoice endpoints"]["generate invoice number"])
         except Exception as e:
-            setup.get_logger().critical(f"Request failed: {e}")
+            logUtils.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
         AssertionUtils.presence_of_response(response)
         AssertionUtils.assert_status_code(response, 200)
         response_json = response.json()
-        assert "invoice_number" in response_json, setup.get_logger().critical(
+        assert "invoice_number" in response_json, logUtils.get_logger().critical(
             "Response JSON does not contain 'invoice_number'"
         )
         invoice_number = response_json["invoice_number"]
-        setup.get_logger().info(f"Generated invoice Number: {invoice_number}")
+        logUtils.get_logger().info(f"Generated invoice Number: {invoice_number}")
         shared_data["invoice_number"] = invoice_number
 
     def test_generate_invoice_number_unauthorized(self, setup):

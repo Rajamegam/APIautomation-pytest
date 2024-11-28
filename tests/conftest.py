@@ -5,6 +5,7 @@ import requests
 from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
 from Utils.email_utils import send_email
+from Utils.log_utils import logUtils
 
 api_helper = BaseClass()
 
@@ -25,7 +26,7 @@ def setup():
                                    config()['client details']['Client Secret']))
     response_data = response.json()
     token = response_data.get("access_token")
-    api_helper.get_logger().info(token)
+    logUtils.get_logger().info(token)
     if token:
         api_helper.set_auth_token(token)
     else:
@@ -34,10 +35,7 @@ def setup():
     yield api_helper
 
 
-""" This is a basic authorization
-
- """
-
+""" This is a basic authorization """
 
 @pytest.fixture(scope='session', autouse=False)
 def basic_auth():
@@ -47,7 +45,7 @@ def basic_auth():
     })
     response_data = response.json()
     token = response_data.get("token")
-    api_helper.get_logger().info(token)
+    logUtils.get_logger().info(token)
     if token:
         api_helper.set_auth_token(token)
     else:

@@ -3,6 +3,7 @@ import pytest
 from Utilities.configurations import config
 from Utilities.data_generator import create_draft_invoice
 from Utils.Assertions import AssertionUtils
+from Utils.log_utils import logUtils
 
 
 class TestCreateDraftInvoice:
@@ -19,16 +20,16 @@ class TestCreateDraftInvoice:
         try:
             response = setup.post(config()["invoice endpoints"]["invoice"], payload=draft_invoice_payload)
         except Exception as e:
-            setup.get_logger().critical(f"Request failed: {e}")
+            logUtils.get_logger().critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
         AssertionUtils.presence_of_response(response)
         AssertionUtils.assert_status_code(response, 201)
         try:
             response_json = response.json()
         except ValueError as e:
-            setup.get_logger().critical(f"Failed to parse JSON response: {e}")
+            logUtils.get_logger().critical(f"Failed to parse JSON response: {e}")
             pytest.fail(f"Failed to parse JSON response: {e}")
         invoice_id = response_json.get("id")
         assert invoice_id, "Invoice ID is missing in the response JSON"
-        setup.get_logger().info(f"Generated Invoice ID is: {invoice_id}")
+        logUtils.get_logger().info(f"Generated Invoice ID is: {invoice_id}")
         shared_data["invoice_id"] = invoice_id
