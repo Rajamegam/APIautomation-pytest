@@ -27,8 +27,8 @@ class logUtils:
     def upload_logs_to_s3(self):
         client = boto3.client(
             "s3",
-            aws_access_key_id="",
-            aws_secret_access_key="",
+            aws_access_key_id="AKIAR7HWYD4WYXPQFOVU",
+            aws_secret_access_key="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",
             region_name="us-east-1"
         )
         try:
