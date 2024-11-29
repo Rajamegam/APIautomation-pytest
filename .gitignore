@@ -1,6 +1,6 @@
-#Ignore all .log files
-logs/
-
-#Ignore properities file
-# Utilities/properties.ini
-
+##Ignore all .log files
+#logs/
+#
+##Ignore properities file
+## Utilities/properties.ini
+#
