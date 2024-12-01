@@ -1,12 +1,7 @@
-import json
-import logging
-import os
-from datetime import datetime
-
-import boto3
 import requests
 from Utilities.configurations import *
 from Utils.log_utils import logUtils
+import pandas as pd
 
 
 class BaseClass:
@@ -94,3 +89,6 @@ class BaseClass:
             logUtils.get_logger().critical(f"PATCH request failed{e}")
             return None
 
+    def read_data(self, file_path):
+        data = pd.read_csv(file_path)
+        return data.to_dict(orient="records")

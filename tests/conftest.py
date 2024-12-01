@@ -11,7 +11,7 @@ api_helper = BaseClass()
 
 
 # Function level fixture to log in and share the access token to set_auth_token function in baseclass
-@pytest.fixture(scope="function", autouse=True)
+@pytest.fixture(scope="function", autouse=False)
 def setup():
     payloads = {
         "grant_type": "client_credentials",
@@ -36,6 +36,7 @@ def setup():
 
 
 """ This is a basic authorization """
+
 
 @pytest.fixture(scope='session', autouse=False)
 def basic_auth():

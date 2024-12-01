@@ -1,5 +1,6 @@
 import configparser
 import os
+import pandas as pd
 
 
 def config():
@@ -7,3 +8,6 @@ def config():
     config_path = os.path.join(os.path.dirname(__file__), "properties.ini")
     config.read(config_path)
     return config
+
+
+
