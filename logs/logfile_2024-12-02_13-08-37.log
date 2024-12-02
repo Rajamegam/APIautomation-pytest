@@ -1,0 +1,18 @@
+2024-12-02 13:08:37,016: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 13:08:37,016: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-12-02 13:08:37,017: INFO: API_logger: Payload details:None
+2024-12-02 13:08:37,017: INFO: API_logger: status code:200
+2024-12-02 13:08:37,017: INFO: API_logger: A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw
+2024-12-02 13:08:37,021: CRITICAL: API_logger: Cannot load data from the CSV: list index out of range
+2024-12-02 13:08:38,042: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 13:08:38,044: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw'},None
+2024-12-02 13:08:38,044: INFO: API_logger: Payload details:None
+2024-12-02 13:08:38,044: INFO: API_logger: status code:200
+2024-12-02 13:08:38,044: INFO: API_logger: A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw
+2024-12-02 13:08:38,046: CRITICAL: API_logger: Cannot load data from the CSV: list index out of range
+2024-12-02 13:08:38,465: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 13:08:38,466: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw'},None
+2024-12-02 13:08:38,467: INFO: API_logger: Payload details:None
+2024-12-02 13:08:38,467: INFO: API_logger: status code:200
+2024-12-02 13:08:38,468: INFO: API_logger: A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw
+2024-12-02 13:08:38,471: CRITICAL: API_logger: Cannot load data from the CSV: list index out of range

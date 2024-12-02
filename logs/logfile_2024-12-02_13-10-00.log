@@ -1,0 +1,24 @@
+2024-12-02 13:10:00,809: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 13:10:00,810: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-12-02 13:10:00,810: INFO: API_logger: Payload details:None
+2024-12-02 13:10:00,811: INFO: API_logger: status code:200
+2024-12-02 13:10:00,811: INFO: API_logger: A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw
+2024-12-02 13:10:01,403: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/catalogs/products
+2024-12-02 13:10:01,404: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw'},None
+2024-12-02 13:10:01,405: INFO: API_logger: Payload details:{'name': 'T-shirt', 'type': 'PHYSICAL', 'id': 2345678989, 'description': 'Cotton XL', 'category': 'CLOTHING', 'image_url': 'https://example.com/gallary/images/2345678989.jpg', 'home_url': 'https://example.com/catalog/2345678989.jpg'}
+2024-12-02 13:10:01,405: INFO: API_logger: status code:201
+2024-12-02 13:10:01,406: INFO: API_logger: Response JSON: {'id': '2345678989', 'name': 'T-shirt', 'description': 'Cotton XL', 'type': 'PHYSICAL', 'category': 'CLOTHING', 'image_url': 'https://example.com/gallary/images/2345678989.jpg', 'home_url': 'https://example.com/catalog/2345678989.jpg', 'create_time': '2024-12-02T07:40:19Z', 'update_time': '2024-12-02T07:40:19Z', 'links': [{'href': 'https://api.sandbox.paypal.com/v1/catalogs/products/2345678989', 'rel': 'self', 'method': 'GET'}, {'href': 'https://api.sandbox.paypal.com/v1/catalogs/products/2345678989', 'rel': 'edit', 'method': 'PATCH'}]}
+2024-12-02 13:10:02,309: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 13:10:02,309: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer <Utils.BaseClass.BaseClass object at 0x000001DEB6AA13A0>'},None
+2024-12-02 13:10:02,310: INFO: API_logger: Payload details:None
+2024-12-02 13:10:02,310: INFO: API_logger: status code:200
+2024-12-02 13:10:02,310: INFO: API_logger: A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw
+2024-12-02 13:10:02,317: CRITICAL: API_logger: POST request failed:Out of range float values are not JSON compliant: nan
+2024-12-02 13:10:02,318: CRITICAL: API_logger: Expected response, got None
+2024-12-02 13:10:02,318: CRITICAL: API_logger: Request failed: None
+2024-12-02 13:10:02,775: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 13:10:02,775: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw'},None
+2024-12-02 13:10:02,776: INFO: API_logger: Payload details:None
+2024-12-02 13:10:02,776: INFO: API_logger: status code:200
+2024-12-02 13:10:02,776: INFO: API_logger: A21AAL8-AX4gEfy59k09bk5zBP42kENHID_5QbnLIxIsCmNCpGTjtGoLUvdYjoDMxRek4q3CJAi_OBuMKwku5BSRnntgXjFkw
+2024-12-02 13:10:02,781: CRITICAL: API_logger: Cannot load data from the CSV: list index out of range
