@@ -8,5 +8,4 @@ pytest-order
 pytest-ordering
 allure-pytest
 pytest-send-email
-boto3
 pandas

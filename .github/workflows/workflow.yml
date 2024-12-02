@@ -33,13 +33,20 @@ jobs:
           TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
           pytest --html=reports/report_$TIMESTAMP.html --self-contained-html || true
 
-      - name: Send Email with Reports and Logs
+      - name: Send Test Report via Email
         env:
           SMTP_SERVER: smtp.gmail.com
           SMTP_PORT: 587
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-          RECEIVER_EMAIL: "rajamegam7@gmail.com"
+          subject: "Pytest Automation Report"
+          to: "rajamegam7@gmail.com"
+          from: "rajamegam.govindaraj@ideas2it.com"
+          content_type: text/html
+          body: |
+            Hi,
+            Please find the attached automation report and log file.
+            Thanks,
         run: |
           python Utils/email_utils.py
 
