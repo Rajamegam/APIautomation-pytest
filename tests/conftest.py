@@ -1,18 +1,15 @@
-from datetime import datetime
-
 import pytest
-import requests
 from Utils.BaseClass import BaseClass
 from Utilities.configurations import *
-from Utils.email_utils import send_email
-from Utils.log_utils import logUtils
+from Utils.log_utils import get_logger
 
 api_helper = BaseClass()
 
 
 # Function level fixture to log in and share the access token to set_auth_token function in baseclass
 @pytest.fixture(scope="function", autouse=False)
-def setup():
+def setup(logger):
+    logger, log_file = get_logger()
     payloads = {
         "grant_type": "client_credentials",
         "ignorecache": "true",
@@ -26,7 +23,7 @@ def setup():
                                    config()['client details']['Client Secret']))
     response_data = response.json()
     token = response_data.get("access_token")
-    logUtils.get_logger().info(token)
+    logger.info(token)
     if token:
         api_helper.set_auth_token(token)
     else:
@@ -39,14 +36,15 @@ def setup():
 
 
 @pytest.fixture(scope='session', autouse=False)
-def basic_auth():
+def basic_auth(logger):
+    logger, log_file = get_logger()
     response = api_helper.post('auth', payload={
         "username": config()['credentials']['username'],
         "password": config()['credentials']['password']
     })
     response_data = response.json()
     token = response_data.get("token")
-    logUtils.get_logger().info(token)
+    logger.info(token)
     if token:
         api_helper.set_auth_token(token)
     else:
@@ -60,3 +58,10 @@ def basic_auth():
 def shared_data():
     data = {}
     return data
+
+
+@pytest.fixture(scope="class")
+def logger():
+    # Initialize the logger once per test class
+    logger, log_file = get_logger()
+    return logger

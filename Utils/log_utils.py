@@ -15,3 +15,7 @@ def get_logger():
         logger.addHandler(filehandler)
 
     return logger, log_file
+
+
+
+

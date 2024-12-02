@@ -3,7 +3,7 @@ import os
 import pytest
 from Utilities.configurations import config
 from Utils.Assertions import AssertionUtils
-from Utils.log_utils import logUtils
+from Utils.log_utils import get_logger
 
 
 def product_json(row_data):
@@ -26,8 +26,7 @@ class TestCreateProduct:
 
     test_records_path = os.path.join("excel Data", "productstestrecords.csv")
 
-    def test_create_product(self, setup):  # TC1: Positive test case with valid data
-        logger = logUtils.get_logger()
+    def test_create_product(self, setup, logger):  # TC1: Positive test case with valid data
         try:
             data = setup.read_data(file_path=self.test_records_path)
             row_data = data[0]
@@ -54,8 +53,7 @@ class TestCreateProduct:
             logger.critical(f"Failed to parse JSON response: {e}")
             pytest.fail(f"Failed to parse JSON response: {e}")
 
-    def test_create_product_empty_name(self, setup):  # TC2: whether getting 400 status for empty 'name' value
-        logger = logUtils.get_logger()
+    def test_create_product_empty_name(self, setup, logger):  # TC2: whether getting 400 status for empty 'name' value
         try:
             data = setup.read_data(file_path=self.test_records_path)
             row_data = data[1]
@@ -82,9 +80,8 @@ class TestCreateProduct:
             logger.critical(f"Failed to parse JSON response: {e}")
             pytest.fail(f"Failed to parse JSON response: {e}")
 
-    def test_create_product_invalid_data_type(self, setup):
+    def test_create_product_invalid_data_type(self, setup, logger):
         # TC3: whether getting 400 status for invalid datatype for 'type' value
-        logger = logUtils.get_logger()
         try:
             data = setup.read_data(file_path=self.test_records_path)
             row_data = data[2]

@@ -3,7 +3,7 @@ import pytest
 from Utilities.configurations import config
 from Utilities.data_generator import update_invoice_details
 from Utils.Assertions import AssertionUtils
-from Utils.log_utils import logUtils
+from Utils.log_utils import get_logger
 
 
 class TestUpdateInvoiceDetails:
@@ -14,7 +14,7 @@ class TestUpdateInvoiceDetails:
 
     @pytest.mark.Regression
     @pytest.mark.order(4)
-    def test_update_invoice_details(self, setup, shared_data):
+    def test_update_invoice_details(self, setup, shared_data, logger):
         invoice_id = shared_data.get("invoice_id")
         update_payload = update_invoice_details(invoice_id)
         try:
@@ -22,9 +22,9 @@ class TestUpdateInvoiceDetails:
                                  params=self.params,
                                  payload=update_payload)
         except Exception as e:
-            logUtils.get_logger().critical(f"Request failed: {e}")
+            logger.critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
         AssertionUtils.presence_of_response(response)
         AssertionUtils.assert_status_code(response, 200)
         response_json = response.json()
-        logUtils.get_logger().info(response_json)
+        logger.info(response_json)
