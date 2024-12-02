@@ -89,6 +89,16 @@ class BaseClass:
             logUtils.get_logger().critical(f"PATCH request failed{e}")
             return None
 
-    def read_data(self, file_path):
-        data = pd.read_csv(file_path)
-        return data.to_dict(orient="records")
+    # def read_data(self, file_path):
+    #     data = pd.read_csv(file_path)
+    #     return data.to_dict(orient="records")
+
+    @staticmethod
+    def read_data(file_path):
+        try:
+            # Read CSV into a DataFrame
+            data = pd.read_csv(file_path)
+            return data.to_dict(orient='records')  # Convert to list of dictionaries
+        except Exception as e:
+            print(f"Error reading CSV file: {e}")
+            return []

@@ -1,4 +1,5 @@
 import datetime
+import uuid
 
 from Utilities.configurations import config
 
@@ -7,7 +8,7 @@ def product_json(row_data):
     return {
         "name": row_data.get("name", ""),
         "type": row_data.get("type", ""),
-        "id": datetime.datetime.now(),
+        "id": str(uuid.uuid4()),
         "description": row_data.get("description", ""),
         "category": row_data.get("category", ""),
         "image_url": row_data.get("image url", ""),
