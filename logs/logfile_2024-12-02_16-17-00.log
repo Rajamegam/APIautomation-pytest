@@ -1,0 +1,32 @@
+2024-12-02 16:17:00,597: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 16:17:00,597: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
+2024-12-02 16:17:00,598: INFO: API_logger: Payload details:None
+2024-12-02 16:17:00,598: INFO: API_logger: status code:200
+2024-12-02 16:17:00,598: INFO: API_logger: A21AAL65s-hqIwTw35KEJ9sXmT4h7VjUgMJI1S_RgHwzb2MQxxyjo90Lpuq7cecfffCNGxQ-vsZrWH7KOI40tvBkTmn3WG1OQ
+2024-12-02 16:17:01,705: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/catalogs/products
+2024-12-02 16:17:01,705: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL65s-hqIwTw35KEJ9sXmT4h7VjUgMJI1S_RgHwzb2MQxxyjo90Lpuq7cecfffCNGxQ-vsZrWH7KOI40tvBkTmn3WG1OQ'},None
+2024-12-02 16:17:01,714: INFO: API_logger: Payload details:{'name': 'T-shirt', 'type': 'PHYSICAL', 'id': 2345678986, 'description': 'Cotton XL', 'category': 'CLOTHING', 'image_url': 'https://example.com/gallary/images/2345678986.jpg', 'home_url': 'https://example.com/catalog/2345678986.jpg'}
+2024-12-02 16:17:01,715: INFO: API_logger: status code:422
+2024-12-02 16:17:01,716: CRITICAL: API_logger: POST request failed:422 Client Error: Unknown Error for url: https://api-m.sandbox.paypal.com/v1/catalogs/products
+2024-12-02 16:17:01,716: INFO: API_logger: Expected status code 201, but got 422
+2024-12-02 16:17:01,717: CRITICAL: API_logger: Request failed: None
+2024-12-02 16:17:01,717: INFO: API_logger: Response JSON: {'name': 'UNPROCESSABLE_ENTITY', 'message': 'The requested action could not be performed, semantically incorrect, or failed business validation.', 'debug_id': 'f854646983276', 'details': [{'field': '/id', 'value': '2345678986', 'location': 'body', 'issue': 'DUPLICATE_RESOURCE_IDENTIFIER', 'description': 'Identifier must be unique'}], 'links': [{'href': 'https://developer.paypal.com/docs/api/v1/billing/subscriptions#UNPROCESSABLE_ENTITY', 'rel': 'information_link', 'method': 'GET'}]}
+2024-12-02 16:17:02,104: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 16:17:02,104: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer <Utils.BaseClass.BaseClass object at 0x000001F6A68EEA50>'},None
+2024-12-02 16:17:02,105: INFO: API_logger: Payload details:None
+2024-12-02 16:17:02,105: INFO: API_logger: status code:200
+2024-12-02 16:17:02,106: INFO: API_logger: A21AAL65s-hqIwTw35KEJ9sXmT4h7VjUgMJI1S_RgHwzb2MQxxyjo90Lpuq7cecfffCNGxQ-vsZrWH7KOI40tvBkTmn3WG1OQ
+2024-12-02 16:17:02,116: CRITICAL: API_logger: POST request failed:Out of range float values are not JSON compliant: nan
+2024-12-02 16:17:02,117: CRITICAL: API_logger: Expected response, got None
+2024-12-02 16:17:02,117: CRITICAL: API_logger: Request failed: None
+2024-12-02 16:17:03,166: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
+2024-12-02 16:17:03,166: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL65s-hqIwTw35KEJ9sXmT4h7VjUgMJI1S_RgHwzb2MQxxyjo90Lpuq7cecfffCNGxQ-vsZrWH7KOI40tvBkTmn3WG1OQ'},None
+2024-12-02 16:17:03,167: INFO: API_logger: Payload details:None
+2024-12-02 16:17:03,167: INFO: API_logger: status code:200
+2024-12-02 16:17:03,167: INFO: API_logger: A21AAL65s-hqIwTw35KEJ9sXmT4h7VjUgMJI1S_RgHwzb2MQxxyjo90Lpuq7cecfffCNGxQ-vsZrWH7KOI40tvBkTmn3WG1OQ
+2024-12-02 16:17:04,205: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/catalogs/products
+2024-12-02 16:17:04,206: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation', 'Authorization': 'Bearer A21AAL65s-hqIwTw35KEJ9sXmT4h7VjUgMJI1S_RgHwzb2MQxxyjo90Lpuq7cecfffCNGxQ-vsZrWH7KOI40tvBkTmn3WG1OQ'},None
+2024-12-02 16:17:04,206: INFO: API_logger: Payload details:{'name': 'Kurtha', 'type': '5232342', 'id': 7654323456, 'description': 'Cotton XL', 'category': 'CLOTHING', 'image_url': 'https://example.com/gallary/images/7654323456.jpg', 'home_url': 'https://example.com/catalog/7654323456.jpg'}
+2024-12-02 16:17:04,206: INFO: API_logger: status code:400
+2024-12-02 16:17:04,207: CRITICAL: API_logger: POST request failed:400 Client Error: Bad Request for url: https://api-m.sandbox.paypal.com/v1/catalogs/products
+2024-12-02 16:17:04,207: INFO: API_logger: Response JSON: {'name': 'INVALID_REQUEST', 'message': 'Request is not well-formed, syntactically incorrect, or violates schema.', 'debug_id': 'f679061763ae2', 'details': [{'field': '/type', 'value': '5232342', 'location': 'body', 'issue': 'INVALID_PARAMETER_VALUE', 'description': 'The value of a field is invalid.'}], 'links': [{'href': 'https://developer.paypal.com/docs/api/v1/billing/subscriptions#INVALID_REQUEST', 'rel': 'information_link', 'method': 'GET'}]}
