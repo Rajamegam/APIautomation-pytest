@@ -5,6 +5,8 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from Utils.log_utils import get_logger
+
 
 def get_latest_report(reports_dir):
     try:
@@ -21,17 +23,13 @@ def get_latest_report(reports_dir):
         return None
 
 
-def send_email(sender_email, receiver_email, subject, report_path, smtp_server, smtp_port, sender_password):
-    if not os.path.exists(report_path):
-        print(f"Report file {report_path} not found")
-        return
-
-    body = "Hi, \n\nPlease find the report for the automation test execution attached."
-
+def send_email(sender_email, receiver_email, attachments, subject, smtp_server, smtp_port,
+               sender_password):
     msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = receiver_email
     msg["Subject"] = subject
+    body = "Hi, \n\nPlease find the report for the automation test execution and its corresponding log file attached."
     msg.attach(MIMEText(body, "plain"))
 
     with open(report_path, "rb") as attachment:
@@ -55,16 +53,17 @@ if __name__ == "__main__":
     reports_dir = "reports"
 
     report_path = get_latest_report(reports_dir)
+    logger, log_file_path = get_logger()
 
-    if report_path:
+    if report_path and log_file_path:
         send_email(
-            subject="Pytest Automation Report",
             sender_email="rajamegam.govindaraj@ideas2it.com",
-            sender_password="tgzn csuv qryq lhvy",
             receiver_email="rajamegam7@gmail.com",
+            attachments="[report_path, log_file_path]",
+            subject="Automation report and Log file",
             smtp_server="smtp.gmail.com",
             smtp_port=587,
-            report_path=report_path
+            sender_password="tgzn csuv qryq lhvy",
         )
     else:
         print("No report found. Email not sent.")
