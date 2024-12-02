@@ -1,5 +1,0 @@
-2024-12-02 08:33:23,486: INFO: API_logger: URL details:https://api-m.sandbox.paypal.com/v1/oauth2/token
-2024-12-02 08:33:23,487: INFO: API_logger: Header details:{'Content-Type': 'application/json', 'prefer': 'return=representation'},None
-2024-12-02 08:33:23,487: INFO: API_logger: Payload details:None
-2024-12-02 08:33:23,488: INFO: API_logger: status code:200
-2024-12-02 08:33:23,489: INFO: API_logger: A21AAKGTcc0imZFpnN8NKY61Fj1G8b-ZpzGtwIw4UTdymFKkGb25aIIq0lZObkFgd4s00hwyHmXxBV43g-8asqR7EZqix81QA
