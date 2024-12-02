@@ -31,7 +31,7 @@ jobs:
       - name: Run Pytest and Generate Reports
         run: |
           TIMESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
-          pytest --html=reports/report_$TIMESTAMP.html --self-contained-html > logs/logfile_$TIMESTAMP.log || true
+          pytest --html=reports/report_$TIMESTAMP.html --self-contained-html || true
 
       - name: Send Email with Reports and Logs
         env:
