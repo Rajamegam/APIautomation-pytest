@@ -4,7 +4,7 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from Utils.log_utils import get_logger
+from log_utils import get_logger
 
 
 def get_latest_report(reports_dir):
