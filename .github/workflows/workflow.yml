@@ -39,14 +39,9 @@ jobs:
           SMTP_PORT: 587
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-          subject: "Pytest Automation Report"
           to: "rajamegam7@gmail.com"
           from: "rajamegam.govindaraj@ideas2it.com"
           content_type: text/html
-          body: |
-            Hi,
-            Please find the attached automation report and log file.
-            Thanks,
         run: |
           python Utils/email_utils.py
 
