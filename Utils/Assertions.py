@@ -15,8 +15,27 @@ class AssertionUtils:
 
         )
 
-    # assert the presence of response
+    # assert the presence of response body
     @staticmethod
-    def presence_of_response(response):
+    def assert_presence_of_response(response):
         logger, log_file = get_logger()
         assert response is not None, logger.critical("Expected response, got None")
+
+    # Function assert the response time, if the actual response time is greater than the expected response time
+    @staticmethod
+    def assert_response_time(response, max_time):
+        logger, log_file = get_logger()
+        assert response.elapsed.total_seconds() > max_time(), logger.critical(
+            f"Response time exceeded: {response.elapsed.total_seconds()}s"
+        )
+
+    # assert expected key and value is in the response
+    @staticmethod
+    def assert_response_contains(response, key, expected_value):
+        logger, log_file = get_logger()
+        assert key in response.json(), logger.critical(f"Key '{key}' not found in the response")
+        assert response.json()[key] == expected_value, logger.critical(
+            f"Expected value for '{key}' is {expected_value}, got {response.json()[key]}")
+
+
+

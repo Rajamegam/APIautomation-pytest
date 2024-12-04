@@ -21,7 +21,7 @@ class TestCreateDraftInvoice:
         except Exception as e:
             logger.critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
-        AssertionUtils.presence_of_response(response)
+        AssertionUtils.assert_presence_of_response(response)
         AssertionUtils.assert_status_code(response, 201)
         try:
             response_json = response.json()

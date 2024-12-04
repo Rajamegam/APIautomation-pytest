@@ -24,7 +24,7 @@ class TestCreateProduct:
     append values to the 'product_json' function, and send them as JSON payloads.
     """
 
-    test_records_path = os.path.join("excel Data", "productstestrecords.csv")
+    test_records_path = os.path.join("TestData", "productstestrecords.csv")
 
     def test_create_product(self, setup, logger):  # TC1: Positive test case with valid data
         try:
@@ -40,7 +40,7 @@ class TestCreateProduct:
                 endpoint=config()["product endpoints"]["create product"],
                 payload=payload
             )
-            AssertionUtils.presence_of_response(response)
+            AssertionUtils.assert_presence_of_response(response)
             AssertionUtils.assert_status_code(response, 201)
         except Exception as e:
             logger.critical(f"Request failed: {e}")
@@ -67,7 +67,7 @@ class TestCreateProduct:
                 endpoint=config()["product endpoints"]["create product"],
                 payload=payload
             )
-            AssertionUtils.presence_of_response(response)
+            AssertionUtils.assert_presence_of_response(response)
             AssertionUtils.assert_status_code(response, 400)
         except Exception as e:
             logger.critical(f"Request failed: {e}")
@@ -95,7 +95,7 @@ class TestCreateProduct:
                 endpoint=config()["product endpoints"]["create product"],
                 payload=payload
             )
-            AssertionUtils.presence_of_response(response)
+            AssertionUtils.assert_presence_of_response(response)
             AssertionUtils.assert_status_code(response, 400)
         except Exception as e:
             logger.critical(f"Request failed: {e}")

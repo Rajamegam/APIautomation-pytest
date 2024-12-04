@@ -19,7 +19,7 @@ class TestGenerateInvoiceNumber:
         except Exception as e:
             logger.critical(f"Request failed: {e}")
             pytest.fail(f"Request failed: {e}")
-        AssertionUtils.presence_of_response(response)
+        AssertionUtils.assert_presence_of_response(response)
         AssertionUtils.assert_status_code(response, 200)
         response_json = response.json()
         assert "invoice_number" in response_json, logger.critical(
