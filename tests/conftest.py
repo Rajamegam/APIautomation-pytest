@@ -7,7 +7,7 @@ api_helper = BaseClass()
 
 
 # Function level fixture to log in and share the access token to set_auth_token function in baseclass
-@pytest.fixture(scope="function", autouse=False)
+@pytest.fixture(scope="function", autouse=True)
 def setup(logger):
     logger, log_file = get_logger()
     payloads = {
@@ -32,9 +32,7 @@ def setup(logger):
     yield api_helper
 
 
-""" This is a basic authorization """
-
-
+# This is a basic authorization
 @pytest.fixture(scope='session', autouse=False)
 def basic_auth(logger):
     logger, log_file = get_logger()
@@ -53,7 +51,7 @@ def basic_auth(logger):
     yield api_helper
 
 
-# shared data fixture to store and retrieve the commonly used variable across the functions
+# shared data fixture to store and retrieve the commonly used variable across the functions for a session
 @pytest.fixture(scope="session")
 def shared_data():
     data = {}

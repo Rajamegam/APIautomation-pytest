@@ -95,7 +95,7 @@ class BaseClass:
         try:
             # Read CSV into a DataFrame
             data = pd.read_csv(file_path)
-            return data.to_dict(orient='records')  # Convert to list of dictionaries
+            return data.to_dict(orient='records')
         except Exception as e:
             print(f"Error reading CSV file: {e}")
             return []

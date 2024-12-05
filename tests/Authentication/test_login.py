@@ -18,7 +18,7 @@ class TestLogin:
                                   config()['client details']['Client ID'],
                                   config()['client details']['Client Secret']))
         response_data = response.json()
-        # token = response_data.get("access_token")
+        token = response_data.get("access_token")
         AssertionUtils.assert_status_code(response, 200)
 
     def test_invalid_login(self, setup):
